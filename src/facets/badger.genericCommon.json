@@ -1,0 +1,16 @@
+{
+    "gamerTag": "xKingDark",
+    "localPlayerPlatformName": "Dark Gamer",
+    "localPlayerPlatformProfilePicture": "/hbui/assets/templateAlex-bbed9.png",
+    "localPlayerPlatform": 13,
+    "playerList": [],
+
+    "fontScale": 0,
+    "uiStyle": 0,
+    "slot": 0,
+    "isHost": true,
+    "isNetworkAvailable": true,
+    "isMultiplayerAllowed": true,
+    "isConnectedXBL": true,
+    "isCrossPlayEnabled": true
+}

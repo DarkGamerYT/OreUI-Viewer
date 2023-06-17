@@ -1,0 +1,9 @@
+{
+    "hudMessages": [],
+    "logMessages": [],
+    "cinematicData": [],
+    "hudVisibility": [],
+    "isTapToSkipCinematic": false,
+    "skipCinematicWindowOpen": false,
+    "cinematicSkipState": false
+}

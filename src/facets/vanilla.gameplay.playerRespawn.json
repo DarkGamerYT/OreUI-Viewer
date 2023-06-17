@@ -1,0 +1,8 @@
+{
+    "isAlive": false,
+    "respawn": {
+        "function": true,
+        "arguments":"",
+        "body":"console.log(\"[EngineWrapper/GameplayPlayerRespawnFacet] respawn()\");"
+    }
+}

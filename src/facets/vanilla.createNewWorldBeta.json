@@ -1,0 +1,13 @@
+{
+    "isBetaSupported": false,
+    "openFeedbackPage": {
+        "function": true,
+        "arguments": "",
+        "body": "console.log(`[EngineWrapper/CNWBetaFacet] openFeedbackPage()`);"
+    },
+    "optOutOfBeta": {
+        "function": true,
+        "arguments": "",
+        "body": "console.log(`[EngineWrapper/CNWBetaFacet] optOutOfBeta()`);"
+    }
+}

@@ -1,0 +1,73 @@
+{
+    "createWorld": false,
+    "isEditorWorld": false,
+    "isUsingTemplate": false,
+    "isLockedTemplate": false,
+    "generalWarningState": 0,
+    "showedAchievementWarning": false,
+    "applyTemplate": {
+        "function": true,
+        "arguments": "",
+        "body": "console.log(\"[EngineWrapper/CNWFacet] applyTemplate()\");"
+    },
+    "createOnRealms": {
+        "call": {
+            "function": true,
+            "arguments": "",
+            "body": "console.log(\"[EngineWrapper/CNWFacet] createOnRealms.call()\");"
+        },
+        "error": null
+    },
+    "worldCreationData": {
+        "general": {
+            "worldName": "Test World",
+            "difficulty": 0,
+            "gameMode": 0
+        },
+        "advanced": {
+            "useFlatWorld": false,
+            "simulationDistance": 8,
+            "startWithMap": false,
+            "bonusChest": false,
+            "showCoordinates": false,
+            "firesSpreads": true,
+            "tntExplodes": true,
+            "respawnBlocksExplode": true,
+            "mobLoot": true,
+            "naturalRegeneration": true,
+            "tileDrops": true,
+            "immediateRespawn": true,
+            "respawnRadius": "5",
+            "worldSeed": ""
+        },
+        "cheats": {
+            "cheatsEnabled": false,
+            "tickSpeed": 1
+        },
+        "betaFeatures": [
+            {
+                "id": "0",
+                "title": "Test",
+                "description": "Hello Kayla!",
+                "isEnabled": false,
+                "category": 0
+            }
+        ],
+        "multiplayer": {
+            "generalWarningState": 0,
+            "multiplayerSupported": true,
+            "playerPermissions": 1,
+            "multiplayerGame": true,
+            "playerAccess": 3,
+            "visibleToLanPlayers": true,
+            "friendlyFire": true,
+            "platformPlayerAccess": 3,
+            "platformPlayerAccessSupported": true,
+            "platformPlayerAccessEnabled": true,
+            "platformPlayerInviteAccessSupported": true
+        },
+        "scriptingCoding": {
+            "codeBuilderEnabled": true
+        }
+    }
+}

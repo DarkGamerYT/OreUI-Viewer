@@ -1,0 +1,73 @@
+{
+    "joinable": true,
+    "viewProfile": {
+        "function": true,
+        "arguments": "t",
+        "body": "console.log(`[EngineWrapper/BadgerInviteMethodsFacet] viewProfile()`);"
+    },
+    "addFriend": {
+        "function": true,
+        "arguments": "t",
+        "body": "console.log(`[EngineWrapper/BadgerInviteMethodsFacet] addFriend()`);"
+    },
+    "removeFriend": {
+        "function": true,
+        "arguments": "t",
+        "body": "console.log(`[EngineWrapper/BadgerInviteMethodsFacet] removeFriend()`);"
+    },
+    "promptToEnableXBLMultiplayer": {
+        "function": true,
+        "arguments": "",
+        "body": "console.log(`[EngineWrapper/BadgerInviteMethodsFacet] promptToEnableXBLMultiplayer()`);"
+    },
+    "refreshFriendsList": {
+        "function": true,
+        "arguments": "",
+        "body": "console.log(`[EngineWrapper/BadgerInviteMethodsFacet] refreshFriendsList()`);"
+    },
+    "viewPendingInvite": {
+        "function": true,
+        "arguments": "platformType,index",
+        "body": "console.log(`[EngineWrapper/BadgerInviteMethodsFacet] viewPendingInvite()`);"
+    },
+    "sendInvite": {
+        "function": true,
+        "arguments": "platformType,index",
+        "body": "console.log(`[EngineWrapper/BadgerInviteMethodsFacet] sendInvite()`);"
+    },
+    "joinGame": {
+        "function": true,
+        "arguments": "platformType,index",
+        "body": "console.log(`[EngineWrapper/BadgerInviteMethodsFacet] joinGame()`);"
+    },
+    "canSendInvite": {
+        "function": true,
+        "arguments": "platformType,index",
+        "body": "console.log(`[EngineWrapper/BadgerInviteMethodsFacet] canSendInvite()`);"
+    },
+    "resetFindPlayerResult": {
+        "function": true,
+        "arguments": "",
+        "body": "console.log(`[EngineWrapper/BadgerInviteMethodsFacet] resetFindPlayerResult()`);"
+    },
+    "reportPlayer": {
+        "function": true,
+        "arguments": "t,n,a",
+        "body": "console.log(`[EngineWrapper/BadgerInviteMethodsFacet] reportPlayer()`);"
+    },
+    "resetReportPlayerResult": {
+        "function": true,
+        "arguments": "",
+        "body": "console.log(`[EngineWrapper/BadgerInviteMethodsFacet] resetReportPlayerResult()`);"
+    },
+    "findPlayerByGamertag": {
+        "function": true,
+        "arguments": "t",
+        "body": "console.log(`[EngineWrapper/BadgerInviteMethodsFacet] findPlayerByGamertag()`);"
+    },
+    "cycleToNextFilter": {
+        "function": true,
+        "arguments": "",
+        "body": "console.log(`[EngineWrapper/BadgerInviteMethodsFacet] cycleToNextFilter()`);"
+    }
+}

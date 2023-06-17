@@ -1,0 +1,7 @@
+{
+    "sendMessage": {
+        "function": true,
+        "arguments": "messageType,message",
+        "body": "console.log(\"[EngineWrapper/EditorScriptingFacet] sendMessage()\", messageType, message);"
+    }
+}

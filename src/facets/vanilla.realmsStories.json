@@ -1,0 +1,227 @@
+{
+    "persistentData": {
+        "currentStoryId": "1000"
+    },
+    "actions": {
+        "postComment": {
+            "run": {
+                "function": true,
+                "arguments": "",
+                "body": ""
+            },
+            "cancel": {
+                "function": true,
+                "arguments": "",
+                "body": "return false;"
+            },
+            "clear": {
+                "function": true,
+                "arguments": "",
+                "body": ""
+            },
+            "result": 1,
+            "state": 1
+        },
+        "postStory": {
+            "run": {
+                "function": true,
+                "arguments": "",
+                "body": ""
+            },
+            "cancel": {
+                "function": true,
+                "arguments": "",
+                "body": "return false;"
+            },
+            "clear": {
+                "function": true,
+                "arguments": "",
+                "body": ""
+            },
+            "result": 1,
+            "state": 1
+        }
+    },
+    "data": {
+        "fetchMembers": {
+            "state": 0
+        },
+        "fetchStories": {
+            "state": 0
+        },
+        "stories": [
+            {
+                "id": "1000",
+                "status": 1,
+                "isNew": true,
+                "body": "Hello!",
+                "image": "/hbui/assets/welcome_graphic-edbb3.png",
+                "imageStatus": 1,
+                "author": {
+                    "gamerTag": "SomeoneRandom",
+                    "gamerIcon": "/src/assets/mcpreview.png",
+                    "isOnline": false,
+                    "role": 1,
+                    "profileStatus": 1,
+                    "recentSessionsStatus": 1,
+                    "recentSessions": [
+                        {
+                            "login": 1672946053089
+                        }
+                    ]
+                },
+                "timePosted": "5 Days Ago",
+                "totalComments": 1,
+                "totalLikes": 1,
+                "hasLiked": true,
+                "commentsStatus": 1,
+                "toggleLike": {
+                    "run": {
+                        "function": true,
+                        "arguments": "",
+                        "body": ""
+                    },
+                    "cancel": {
+                        "function": true,
+                        "arguments": "",
+                        "body": "return false;"
+                    },
+                    "clear": {
+                        "function": true,
+                        "arguments": "",
+                        "body": ""
+                    },
+                    "result": 1,
+                    "state": 1
+                },
+                "delete": {
+                    "function": true,
+                    "arguments": "",
+                    "body": ""
+                },
+                "fetchComments": {
+                    "state": 0
+                },
+                "comments": [
+                    {
+                        "id": "1001",
+                        "storyID": "",
+                        "author": {
+                            "gamerTag": "SomeoneRandom",
+                            "gamerIcon": "/src/assets/mcpreview.png",
+                            "isOnline": false,
+                            "role": 1,
+                            "profileStatus": 1,
+                            "recentSessionsStatus": 1,
+                            "fetchSessions": {
+                                "run": {
+                                    "function": true,
+                                    "arguments": "",
+                                    "body": ""
+                                },
+                                "cancel": {
+                                    "function": true,
+                                    "arguments": "",
+                                    "body": "return false;"
+                                },
+                                "clear": {
+                                    "function": true,
+                                    "arguments": "",
+                                    "body": ""
+                                },
+                                "result": 1,
+                                "state": 1
+                            },
+                            "recentSessions": [
+                                {
+                                    "login": 1672946053089
+                                }
+                            ]
+                        },
+                        "body": "Wow, I can't believe that happened!",
+                        "timePosted": "Recently",
+                        "totalLikes": 1,
+                        "isNew": false,
+                        "hasLiked": false,
+                        "toggleLike": {
+                            "function": true,
+                            "arguments": "",
+                            "body": ""
+                        },
+                        "delete": {
+                            "function": true,
+                            "arguments": "",
+                            "body": ""
+                        }
+                    }
+                ]
+            }
+        ],
+        "members": [
+            {
+                "gamerTag": "Mojang",
+                "gamerIcon": "/src/assets/mcpreview.png",
+                "isOnline": true,
+                "role": 2,
+                "profileStatus": 1,
+                "recentSessionsStatus": 1,
+                "fetchSessions": {
+                    "run": {
+                        "function": true,
+                        "arguments": "",
+                        "body": ""
+                    },
+                    "cancel": {
+                        "function": true,
+                        "arguments": "",
+                        "body": "return false;"
+                    },
+                    "clear": {
+                        "function": true,
+                        "arguments": "",
+                        "body": ""
+                    },
+                    "result": 1,
+                    "state": 1
+                },
+                "recentSessions": [
+                    {
+                        "login": 1672946053089
+                    }
+                ]
+            },
+            {
+                "gamerTag": "SomeoneRandom",
+                "gamerIcon": "/src/assets/mcpreview.png",
+                "isOnline": false,
+                "role": 1,
+                "profileStatus": 1,
+                "recentSessionsStatus": 1,
+                "fetchSessions": {
+                    "run": {
+                        "function": true,
+                        "arguments": "",
+                        "body": ""
+                    },
+                    "cancel": {
+                        "function": true,
+                        "arguments": "",
+                        "body": "return false;"
+                    },
+                    "clear": {
+                        "function": true,
+                        "arguments": "",
+                        "body": ""
+                    },
+                    "result": 1,
+                    "state": 1
+                },
+                "recentSessions": [
+                    {
+                        "login": 1672912800000
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "openLink": {
+        "function": true,
+        "arguments": "",
+        "body": "console.log(\"[EngineWrapper/VanillaWebBrowserFacet] openLink()\");"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "startLocalWorld": {
+        "result": 0,
+        "run": {
+            "function": true,
+            "arguments": "worldId",
+            "body": "console.log(`[EngineWrapper/VanillaWorldStartupFacet] Starting local world with id: ${worldId}`);"
+        },
+        "clear": {
+            "function": true,
+            "arguments": "",
+            "body": ""
+        }
+    }
+}

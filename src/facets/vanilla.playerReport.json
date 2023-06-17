@@ -1,0 +1,30 @@
+{
+    "reportPlayer": {
+        "function": true,
+        "arguments":"whereReport,reason,message,xuid,uuid",
+        "body":"console.log(\"[EngineWrapper/PlayerReportFacet] reportPlayer()\");"
+    },
+    "isChatAvailable": {
+        "function": true,
+        "arguments":"",
+        "body":"return true;"
+    },
+    "reportAreaOptions": [
+        {
+            "label": "Test",
+            "value": "test"
+        }
+    ],
+    "reportableChatMessages": [
+        {
+            "message": "Reportable Message!",
+            "author": "xKingDark",
+            "isAuthorBeingReported": true
+        },
+        {
+            "message": "Hello!",
+            "author": "Random User",
+            "isAuthorBeingReported": false
+        }
+    ]
+}

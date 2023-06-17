@@ -1,0 +1,27 @@
+{
+    "realmSlots": [
+        {
+            "id": 1,
+            "worldName": "My World",
+            "slotImage": ""
+        },
+        {
+            "id": -1,
+            "worldName": "New World",
+            "slotImage": ""
+        },
+        {
+            "id": 3,
+            "worldName": "Celebration Map",
+            "slotImage": "https://packsbedrockstage-endpoint.azureedge.net/pack-images/celebration_world_icon.jpg"
+        }
+    ],
+    "status": 0,
+    "selectedRealmIndex": 0,
+    "selectedRealmName": "My Realm",
+    "getSelectedRealmDetails": {
+        "function": true,
+        "arguments": "",
+        "body": ""
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "showPrivacyChangedNoInternetModal": false,
+    "settingCategories": [
+        "debug"
+    ],
+    "settings": [
+        {
+            "category": "debug",
+            "subcategories": []
+        }
+    ]
+}

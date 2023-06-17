@@ -1,0 +1,27 @@
+{
+    "fontZoom": 100,
+    "theme": 0,
+    "isEditorMode": true,
+    "selectedTool": "",
+    "selectedOperator": 1,
+    "getKey": {
+        "function": true,
+        "arguments": "",
+        "body": "return \"{}\""
+    },
+    "setKey": {
+        "function": true,
+        "arguments": "",
+        "body": ""
+    },
+    "setKeys": {
+        "function": true,
+        "arguments": "",
+        "body": ""
+    },
+    "hasKey": {
+        "function": true,
+        "arguments": "",
+        "body": "return true;"
+    }
+}

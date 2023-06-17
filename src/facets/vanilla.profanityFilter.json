@@ -1,0 +1,7 @@
+{
+    "isProfanityInString": {
+        "function": true,
+        "arguments": "string",
+        "body": "console.log(\"[EngineWrapper/ProfanityFilterFacet] isProfanityInString()\");\nreturn true;"
+    }
+}

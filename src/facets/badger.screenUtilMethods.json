@@ -1,0 +1,7 @@
+{
+    "goBackToMainMenu": {
+        "function": true,
+        "arguments": "",
+        "body": "console.log(`[EngineWrapper/BadgerScreenUtilMethodsFacet] goBackToMainMenu()`);"
+    }
+}

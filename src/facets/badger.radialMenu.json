@@ -1,0 +1,8 @@
+{
+    "isMenuShowing": false,
+    "currentLuredUnitCount": 0,
+    "currentLuredUnitType": 0,
+    "lureCap": 5,
+    "isHeroLuring": false,
+    "isHeroDirecting": false
+}

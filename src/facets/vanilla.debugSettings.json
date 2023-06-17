@@ -1,0 +1,41 @@
+{
+    "isBiomeOverrideActive": false,
+    "flatNether": false,
+    "dimension": 0,
+    "allBiomes": [
+      {
+        "id": "0",
+        "label": "plains",
+        "dimension": 0
+      },
+      {
+        "id": "1",
+        "label": "birch_forest",
+        "dimension": 0
+      },
+      {
+        "id": "2",
+        "label": "jungle",
+        "dimension": 0
+      },
+      {
+        "id": "3",
+        "label": "hell",
+        "dimension": 1
+      },
+      {
+        "id": "4",
+        "label": "basalt_delta",
+        "dimension": 1
+      },
+      {
+        "id": "5",
+        "label": "warped_forest",
+        "dimension": 1
+      }
+    ],
+    "spawndimensionid": 0,
+    "spawnBiomeid": 0,
+    "biomeOverrideid": 0,
+    "defaultSpawnBiome": 0
+}

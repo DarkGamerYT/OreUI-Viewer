@@ -1,0 +1,80 @@
+{
+  "localWorldsWithoutEntitlement": [
+    {
+      "id": "test",
+      "name": "Experimental World",
+      "isExperimental": true,
+      "lastPlayed": 1665460196,
+      "gameMode": 0,
+      "fileSize": "30 MB",
+      "previewImgPath": "/hbui/assets/world-preview-default-03016.jpg",
+      "gameVersion": {
+        "major": 1,
+        "minor": 20,
+        "patch": 0,
+        "revision": 20
+      }
+    },
+    {
+      "id": "test2",
+      "name": "My world",
+      "lastPlayed": 1665460196,
+      "gameMode": 0,
+      "fileSize": "30 MB",
+      "previewImgPath": "/screenshot4.png",
+      "gameVersion": {
+        "major": 1,
+        "minor": 20,
+        "patch": 0,
+        "revision": 20
+      }
+    }
+  ],
+  "localWorlds": [],
+    "localWorldst": [
+      {
+        "id": "test",
+        "name": "Experimental World",
+        "isExperimental": true,
+        "lastPlayed": 1665460196,
+        "gameMode": 0,
+        "fileSize": "30 MB",
+        "previewImgPath": "/hbui/assets/world-preview-default-03016.jpg",
+        "gameVersion": {
+          "major": 1,
+          "minor": 20,
+          "patch": 0,
+          "revision": 20
+        }
+      },
+      {
+        "id": "test1",
+        "name": "Test",
+        "lastPlayed": 1665460196,
+        "gameMode": 1,
+        "fileSize": "30 MB",
+        "previewImgPath": "/screenshot3.png",
+        "gameVersion": {
+          "major": 1,
+          "minor": 20,
+          "patch": 0,
+          "revision": 20
+        }
+      },
+      {
+        "id": "test2",
+        "name": "Test",
+        "lastPlayed": 1665460196,
+        "gameMode": 0,
+        "fileSize": "30 MB",
+        "previewImgPath": "/screenshot4.png",
+        "gameVersion": {
+          "major": 1,
+          "minor": 20,
+          "patch": 0,
+          "revision": 20
+        }
+      }
+    ],
+    "allWorlds": []
+}

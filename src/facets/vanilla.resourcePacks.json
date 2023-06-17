@@ -1,0 +1,61 @@
+{
+    "texturePacks": {
+        "activeGlobal": [],
+        "active": [],
+        "available": [
+            {
+                "image": "/hbui/assets/minecraft-texture-pack-070c0.png",
+                "name": "Minecraft",
+                "description": "A test resource pack!",
+                "id": "7f4bt1a2-43dd-45b1-aa3f-0b3ca2ebd5c8",
+                "contentId": "7f4bt1a2-43dd-45b1-aa3f-0b3ca2ebd5c8",
+                "isMarketplaceItem": false
+            }
+        ],
+        "realms": [],
+        "unowned": []
+    },
+    "behaviorPacks": {
+        "active": [],
+        "available": [
+            {
+                "image": "/hbui/assets/minecraft-texture-pack-070c0.png",
+                "name": "Minecraft",
+                "description": "A test behavior pack!",
+                "id": "7f4bt1a2-43dd-45b1-aa3f-0b3ca2ebd5c8",
+                "contentId": "7f4bt1a2-43dd-45b1-aa3f-0b3ca2ebd5c8",
+                "isMarketplaceItem": false
+            }
+        ]
+    },
+    "status": 0,
+    "downloadProgress": 0.5,
+    "importProgress": 0.1,
+    "resourcePackToDownload": {
+        "title": "Test"
+    },
+    "marketplacePackId": "1",
+    "userOwnsAtLeastOnePack": true,
+    "prompt": {
+        "actions": [],
+        "active": false,
+        "body": "",
+        "handleAction": {
+            "function": true,
+            "arguments": "",
+            "body": "console.log(\"[EngineWrapper/RPFacet] prompt.handleAction()\");"
+        },
+        "id": "prompt",
+        "title": ""
+    },
+    "activate": {
+        "function": true,
+        "arguments": "",
+        "body": "console.log(\"[EngineWrapper/RPFacet] activate()\");"
+    },
+    "deactivate": {
+        "function": true,
+        "arguments": "",
+        "body": "console.log(\"[EngineWrapper/RPFacet] deactivate()\");"
+    }
+}

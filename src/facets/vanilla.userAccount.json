@@ -1,0 +1,16 @@
+{
+    "isTrialAccount": false,
+    "isLoggedInWithMicrosoftAccount": false,
+    "hasPremiumNetworkAccess": true,
+    "hasValidCrossPlatformSkin": true,
+    "showPremiumNetworkUpsellModal": {
+        "function": true,
+        "arguments": "",
+        "body": "console.log(\"[EngineWrapper/UserAccountFacet] showPremiumNetworkUpsellModal()\");"
+    },
+    "showMicrosoftAccountLogInScreen": {
+        "function": true,
+        "arguments": "",
+        "body": "console.log(\"[EngineWrapper/UserAccountFacet] showMicrosoftAccountLogInScreen()\");"
+    }
+}

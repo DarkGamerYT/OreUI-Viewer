@@ -1,0 +1,7 @@
+{
+    "fireEventButtonPressed": {
+        "function": true,
+        "arguments": "event",
+        "body": "console.log(`[EngineWrapper/VanillaTelem] EventButtonPressed: ${event}`);"
+    }
+}

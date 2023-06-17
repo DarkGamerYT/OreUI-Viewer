@@ -1,0 +1,32 @@
+{
+    "updateCharacterSceneToSavedCharacter": {
+        "function": true,
+        "arguments": "",
+        "body": "console.log(`[EngineWrapper/GenericPreGameMethodsFacet] updateCharacterSceneToSavedCharacter();`);"
+    },
+    "refreshPersonas": {
+        "function": true,
+        "arguments": "",
+        "body": "console.log(`[EngineWrapper/GenericPreGameMethodsFacet] refreshPersonas();`);"
+    },
+    "setShowTutorialCompleteModal": {
+        "function": true,
+        "arguments": "e",
+        "body": "console.log(`[EngineWrapper/GenericPreGameMethodsFacet] setShowTutorialCompleteModal();`);"
+    },
+    "clearIsFirstSignIn": {
+        "function": true,
+        "arguments": "",
+        "body": "return true;"
+    },
+    "setCharacterScene": {
+        "function": true,
+        "arguments": "e",
+        "body": "console.log(`[EngineWrapper/GenericPreGameMethodsFacet] setCharacterScene();`);"
+    },
+    "checkHasEnoughStorage": {
+        "function": true,
+        "arguments": "",
+        "body": "return true;"
+    }
+}

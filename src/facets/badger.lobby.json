@@ -1,0 +1,10 @@
+{
+    "teamSwitching": true,
+    "campaignHubHostGameModes": [
+        {
+            "modeName": 9
+        }
+    ],
+    "lostLegendsHubHostGameModes": [],
+    "mythsHubHostGameModes": []
+}

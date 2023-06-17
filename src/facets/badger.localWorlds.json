@@ -1,0 +1,15 @@
+{
+    "worlds": [
+        {
+            "id": "test",
+            "gameMode": 9,
+            "title": "Test",
+            "seed": 1,
+            "currentDay": 0,
+            "difficulty": 1,
+            "date": 0,
+            "time": 0,
+            "sizeMB": 10
+        }
+    ]
+}
