@@ -1,5 +1,5 @@
 # OreUI Shim
-Engine created by [Candela](https://github.com/Luminoso-256).
+Engine created by [Candela](https://github.com/Luminoso-256/oreUIShim).
 
 ## How to use
 
@@ -33,5 +33,5 @@ oreui
 Start the app from the base directory (in our example, `oreui`):
 
 ```bash
-node .
+npm run start
 ```
