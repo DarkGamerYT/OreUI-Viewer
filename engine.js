@@ -8,11 +8,7 @@ pretend to be the bedrock engine for oreUI's sake
 const fs = require( "fs" );
 
 let _ME_Translations = {};
-const Config = {
-  pathname: "/realms-choose-slot",
-  use_translation: true,
-  locale: "en_US",
-};
+const Config = require( "./config.json" );
 
 if (navigator.userAgent.match( "/cohtml/i" )) {
   console.warn(
