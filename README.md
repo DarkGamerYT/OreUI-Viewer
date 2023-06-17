@@ -7,6 +7,7 @@ Prerequisite: `config.json` has `use_translation`. By default, this is set to `t
 Copy `hbui` folder from your game files (`data/gui/dist`) to the base directory
 
 Ensure you have the correct file structure.
+
 The files should look something like this:
 
 ```
