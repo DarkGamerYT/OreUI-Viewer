@@ -52,7 +52,7 @@ const createWindow = () => {
 			minHeight: 640,
 			width: 1070,
 			height: 648,
-			title: "Minecraft",
+			title: "Minecraft OreUI",
 			icon: "./src/assets/mcpreview.png",
 			autoHideMenuBar: true,
 			resizable: true,

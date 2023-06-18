@@ -75,21 +75,22 @@ const _ME_RouterFacet = {
     _ME_previousLocations: [],
     length: 5,
     action: "REPLACE",
-    replace: function (path) {
+    replace(path) {
+	  if (path.includes("?")) return;
       this._ME_previousLocations.push( this.location.pathname );
       this.action = "REPLACE";
       console.log( "[EngineWrapper/RouterFacet] replacing path to " + path );
       this.location.pathname = path;
       window.engine.bindings[`facet:updated:core.router`]( _ME_Facets["core.router"] );
     },
-    goBack: () => {
+    goBack() {
       console.warn( "goBack currently doesn't seem to work!" );
       console.log( "[EngineWrapper/RouterFacet] goingBack." );
       this.location.pathname = this._ME_previousLocations[this._ME_previousLocations.length - 2];
       window.engine.bindings[`facet:updated:core.router`]( _ME_Facets["core.router"] );
       this._ME_previousLocations.pop();
     },
-    push: function (path) {
+    push(path) {
       this.action = "PUSH";
       this._ME_previousLocations.push( this.location.pathname );
       console.log( "[EngineWrapper/RouterFacet] pushing path to " + path );
@@ -185,7 +186,7 @@ window.engine = {
 window.addEventListener(
 	"DOMContentLoaded",
 	() => {
-		document.getElementsByTagName( "body" )[0].style = `background-image: url("/src/assets/panorama.png"); background-size: cover;`;
+		document.getElementsByTagName( "body" )[0].style = `background-image: url("/src/assets/panorama.png"); background-size: cover; user-select: none;`;
 		
 		const styleEl = document.createElement("style");
 		document.head.appendChild(styleEl);
@@ -193,11 +194,13 @@ window.addEventListener(
 		const styleSheet = styleEl.sheet;
 		
 		styleSheet.insertRule( `::-webkit-scrollbar { width: 0; }`, styleSheet.cssRules.length );
+		styleSheet.insertRule( `input { outline: none; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `.RdcBM { flex-wrap: unset; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `.OnsGF { height: fit-content; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `.ekhCp { overflow: auto; }`, styleSheet.cssRules.length );
-		styleSheet.insertRule( `.iWrTh, .vPqz2, .XiGeZ, .MneaI, .c_o_5 { width: auto; }`, styleSheet.cssRules.length );
+		styleSheet.insertRule( `.iWrTh, .vPqz2, .XiGeZ, .MneaI, .c_o_5, .oQouW, .P3s5b, .nDjUk, .T3q0T { width: auto; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `.nUoyP { height: 1.5rem; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `.uHy0P { min-height: 2.8rem; }`, styleSheet.cssRules.length );
+		styleSheet.insertRule( `.mbdeF { width: auto; min-width: auto; }`, styleSheet.cssRules.length );
 	},
 );
