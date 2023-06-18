@@ -1,66 +1,71 @@
 {
     "inboxMessages": [
         {
-            "id": "1",
+            "id": 1,
             "dateReceived": 1681687651,
             "dateString": "11:35 am",
             "dateLabel": "",
-            "title": "News History Test1",
-            "sender": "Gamertag0123456",
+            "title": "News :D",
+            "sender": "xKingDark",
             "content": "Hello World!",
             "read": true,
             "invitationId": "InvIdTest",
             "announcementType": 0,
-            "imgSource": "/hbui/assets/world-preview-default-03016.jpg",
+            "imgSource": "/src/assets/screenshot4.png",
             "invType": 0,
             "invStatus": 0
         },
         {
             "id": "2",
-            "dateReceived": "1681687651",
+            "dateReceived": 1681687651,
             "dateString": "11:35 am",
             "dateLabel": "",
-            "title": "Invite History Test1",
-            "sender": "Gamertag0123456",
+            "title": "Game Invite :D",
+            "sender": "xKingDark",
             "content": "Hello World!",
             "read": false,
             "invitationId": "InvIdTest",
             "announcementType": 1,
-            "imgSource": "/hbui/assets/world-preview-default-03016.jpg",
+            "imgSource": "/src/assets/screenshot4.png",
             "invType": 2,
             "invStatus": 0,
             "template": "",
-            "instanceId": "4"
+            "instanceId": "2"
         },
         {
             "id": "3",
-            "dateReceived": "1681687651",
+            "dateReceived": 1681687651,
             "dateString": "11:35 am",
             "dateLabel": "",
-            "title": "Invite History Test1",
-            "sender": "Gamertag0123456",
+            "title": "Realm Invite :D",
+            "sender": "xKingDark",
             "content": "Hello World!",
             "read": false,
             "invitationId": "InvIdTest",
             "announcementType": 2,
-            "imgSource": "/hbui/assets/world-preview-default-03016.jpg",
+            "imgSource": "/src/assets/screenshot4.png",
             "invType": 2,
             "invStatus": 0,
             "template": "",
-            "instanceId": "4"
+            "instanceId": "3"
         }
     ],
     "categoryUnreadMessages": [],
     "realmsSubscriber": true,
     "deleteNotification": {
         "function": true,
-        "arguments":"id",
-        "body":"return id;"
+        "arguments": "id",
+        "body": "return id;"
     },
     "saveSettings": {
         "function": true,
-        "arguments":"",
-        "body":""
+        "arguments": "",
+        "body": ""
+    },
+    "setNotificationRead": {
+        "function": true,
+        "arguments": "",
+        "body": ""
     },
     "settings": {
         "showOnlyFriendInvites": true,

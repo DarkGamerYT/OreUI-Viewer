@@ -1,5 +1,4 @@
 {
-    "createWorld": false,
     "isEditorWorld": false,
     "isUsingTemplate": false,
     "isLockedTemplate": false,
@@ -7,8 +6,8 @@
     "showedAchievementWarning": false,
     "applyTemplate": {
         "function": true,
-        "arguments": "",
-        "body": "console.log(\"[EngineWrapper/CNWFacet] applyTemplate()\");"
+        "arguments": "templateId",
+        "body": "console.log(\"[EngineWrapper/CNWFacet] applyTemplate();\", templateId);"
     },
     "createOnRealms": {
         "call": {
@@ -17,6 +16,24 @@
             "body": "console.log(\"[EngineWrapper/CNWFacet] createOnRealms.call()\");"
         },
         "error": null
+    },
+	"createWorld": {
+        "call": {
+            "function": true,
+            "arguments": "",
+            "body": "console.log(\"[EngineWrapper/CNWFacet] createWorld.call()\");"
+        },
+        "error": null
+    },
+	"unlockTemplateSettings": {
+        "function": true,
+        "arguments": "",
+        "body": "return true;"
+    },
+	"checkIfUserHasChangedSettings": {
+        "function": true,
+        "arguments": "",
+        "body": "return true;"
     },
     "worldCreationData": {
         "general": {
@@ -47,10 +64,24 @@
         "betaFeatures": [
             {
                 "id": "0",
-                "title": "Test",
-                "description": "Hello Kayla!",
+                "title": "Gameplay Test",
+                "description": "Hello!",
                 "isEnabled": false,
                 "category": 0
+            },
+            {
+                "id": "0",
+                "title": "Add-on Creators Test",
+                "description": "Hello!",
+                "isEnabled": false,
+                "category": 1
+            },
+            {
+                "id": "0",
+                "title": "Internal Test",
+                "description": "Hello!",
+                "isEnabled": false,
+                "category": 2
             }
         ],
         "multiplayer": {
