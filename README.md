@@ -1,4 +1,4 @@
-# OreUI Shim
+# OreUI Viewer
 Engine created by [Candela](https://github.com/Luminoso-256/oreUIShim).
 
 ## How to use
