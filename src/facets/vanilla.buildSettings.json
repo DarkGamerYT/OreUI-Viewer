@@ -1,11 +1,12 @@
 {
     "isDevBuild": true,
     "isEduBuild": false,
-    "isPreviewBuild": false,
+    "isPreviewBuild": true,
+	"isBetaBuild": false,
     "currentGameVersion": {
         "major": 1,
-        "minor": 19,
-        "patch": 80,
-        "revision": 24
+        "minor": 20,
+        "patch": 30,
+        "revision": 21
     }
 }

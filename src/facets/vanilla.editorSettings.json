@@ -2,8 +2,8 @@
     "fontZoom": 100,
     "theme": 0,
     "isEditorMode": true,
-    "selectedTool": "",
-    "selectedOperator": 1,
+    "selectedTool": "test",
+    "selectedOperator": 0,
     "getKey": {
         "function": true,
         "arguments": "",

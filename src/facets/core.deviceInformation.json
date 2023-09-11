@@ -1,10 +1,6 @@
 {
     "pixelsPerMillimeter": 3,
-    "inputMethods": [
-        0,
-        1,
-        2
-    ],
+    "inputMethods": [ 0, 1, 2 ],
     "isLowMemoryDevice": false,
     "guiScaleBase": 0,
     "platform": 3,

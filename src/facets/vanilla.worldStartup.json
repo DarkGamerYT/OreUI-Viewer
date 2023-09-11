@@ -1,4 +1,7 @@
 {
+    "backupThenStartLocalWorld": {
+        "state": 0
+    },
     "startLocalWorld": {
         "result": 0,
         "run": {

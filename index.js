@@ -1,5 +1,3 @@
-const debug = true;
-
 require( "@electron/remote/main" ).initialize();
 const {
 	app,
@@ -8,10 +6,10 @@ const {
 } = require( "electron" );
 const express = require( "express" );
 const server = express();
-server.use(express.static( "." ))
+server.use(express.static( __dirname ))
 
-const port = 8000
-
+const debug = true;
+const port = 3000;
 app.on( "window-all-closed", () => app.quit() );
 app.on("ready",
 	() => {
@@ -52,8 +50,8 @@ const createWindow = () => {
 			minHeight: 640,
 			width: 1070,
 			height: 648,
-			title: "Minecraft OreUI",
-			icon: "./src/assets/mcpreview.png",
+			title: "Minecraft",
+			icon: "./src/assets/mc.png",
 			autoHideMenuBar: true,
 			resizable: true,
 			webPreferences: {
@@ -69,9 +67,8 @@ const createWindow = () => {
 	);
 
 	require( "@electron/remote/main" ).enable( win.webContents );
-	
-	app.setAppUserModelId( "Bedrock Editor Launcher" );
+	app.setAppUserModelId( "OreUI" );
 
 	win.show();
-	win.loadURL( "http://127.0.0.1:8000/hbui" );
+	win.loadURL( "http://127.0.0.1:3000/hbui" );
 };

@@ -16,10 +16,28 @@
             "slotImage": "https://packsbedrockstage-endpoint.azureedge.net/pack-images/celebration_world_icon.jpg"
         }
     ],
+	"isLoading": false,
     "status": 0,
     "selectedRealmIndex": 0,
+	"isSlotSelected": false,
+	"isShowingConfirmationModal": false,
     "selectedRealmName": "My Realm",
     "getSelectedRealmDetails": {
+        "function": true,
+        "arguments": "id",
+        "body": ""
+    },
+	"selectSlot": {
+        "function": true,
+        "arguments": "slot",
+        "body": ""
+    },
+	"confirm": {
+        "function": true,
+        "arguments": "",
+        "body": ""
+    },
+	"reset": {
         "function": true,
         "arguments": "",
         "body": ""

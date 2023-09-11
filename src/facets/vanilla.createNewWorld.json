@@ -25,6 +25,11 @@
         },
         "error": null
     },
+	"createWorldOnPreviewRealm": {
+        "function": true,
+        "arguments": "id",
+        "body": ""
+    },
 	"unlockTemplateSettings": {
         "function": true,
         "arguments": "",
@@ -64,15 +69,15 @@
         "betaFeatures": [
             {
                 "id": "0",
-                "title": "Gameplay Test",
-                "description": "Hello!",
+                "title": "The next major update",
+                "description": "Minecraft: Banana Update",
                 "isEnabled": false,
                 "category": 0
             },
             {
                 "id": "0",
-                "title": "Add-on Creators Test",
-                "description": "Hello!",
+                "title": "The Add-on breaker",
+                "description": "Breaks every add-on ever created.",
                 "isEnabled": false,
                 "category": 1
             },

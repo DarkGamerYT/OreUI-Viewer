@@ -6,45 +6,50 @@ pretend to be the bedrock engine for oreUI's sake
 */
 
 const fs = require( "fs" );
+const { Cubemap } = require( "@hatchibombotar/cubemap" );
 
 let _ME_Translations = {};
 const Config = require( "./config.json" );
 
 if (navigator.userAgent.match( "/cohtml/i" )) {
-  console.warn(
-    "[EngineWrapper] OreUI Shim Injected, but the UI is being loaded in gameface!"
-  );
+	console.warn(
+		"[EngineWrapper] OreUI Shim Injected, but the UI is being loaded in gameface!"
+	);
 };
 
 const _ME_LocaleFacet = {
-  locale: Config.locale,
-  translate: (id) => {
-    if (Config.use_translation) return _ME_Translations[id]?.split( "###" )[0];
-    else {
-      console.warn(
-        `[EngineWrapper/LocaleFacet] USE_TRANSLATIONS not set, skipping translate: ${id}`
-      );
+	locale: Config.locale,
+	translate: (id) => {
+		if (Config.use_translation) return _ME_Translations[id]?.split( "#" )[0]?.trim();
+		else {
+			console.warn(
+				`[EngineWrapper/LocaleFacet] USE_TRANSLATIONS not set, skipping translate: ${id}`
+			);
 
-      return id;
-    };
-  },
-  translateWithParameters: (id, params) => {
-    if (Config.use_translation) {
-      let translation = _ME_Translations[id];
-      for (i = 1; i <= params.length; i++) {
-          translation = translation?.replaceAll( "%" + i + "$s", params[i - 1] )
-      };
-
-      return translation?.split( "###" )[0];
-    } else {
-      console.warn(
-        `[EngineWrapper/LocaleFacet] USE_TRANSLATIONS not set, skipping translate w/ param: ${id}`
-      );
+			return id;
+		};
+	},
+	translateWithParameters: (id, params) => {
+		if (Config.use_translation) {
+			let translation = _ME_Translations[id];
+			if (/%\d+|$s/g.test(translation)) {
+				for (i = 1; i <= params.length; i++) {
+					translation = translation?.replaceAll( "%" + i + "$s", params[i - 1] );
+				};
+			} else {
+				translation = translation?.replaceAll( "%s", params[0] );
+			};
+			
+			return translation?.split( "#" )[0]?.trim();
+		} else {
+			console.warn(
+				`[EngineWrapper/LocaleFacet] USE_TRANSLATIONS not set, skipping translate w/ param: ${id}`
+			);
       
-      return id;
-    };
-  },
-  formatDate: (timestampInSeconds) => new Date( timestampInSeconds * 1000 ).toLocaleDateString(),
+			return id;
+		};
+	},
+	formatDate: (timestampInSeconds) => new Date( timestampInSeconds * 1000 ).toLocaleDateString(),
 };
 
 const _ME_SoundFacet = {
@@ -66,36 +71,50 @@ const _ME_SoundFacet = {
 const _ME_RouterFacet = {
   engineUITransitionTime: 800,
   history: {
-    location: {
-      hash: "",
-      search: "",
-      state: "",
-      pathname: Config.pathname,
-    },
-    _ME_previousLocations: [],
+    list: [
+      {
+        hash: "",
+        search: "",
+        state: "",
+        pathname: Config.pathname,
+      },
+    ],
     length: 5,
     action: "REPLACE",
     replace(path) {
-	  if (path.includes("?")) return;
-      this._ME_previousLocations.push( this.location.pathname );
+	    if (path.includes( "?" )) return;
       this.action = "REPLACE";
+      this.list.push(
+        {
+          hash: "",
+          search: "",
+          state: "",
+          pathname: path,
+        },
+      );
+
       console.log( "[EngineWrapper/RouterFacet] replacing path to " + path );
-      this.location.pathname = path;
-      window.engine.bindings[`facet:updated:core.router`]( _ME_Facets["core.router"] );
+      window.engine.bindings[ `facet:updated:core.router` ]( _ME_Facets[ "core.router" ] );
     },
     goBack() {
       console.warn( "goBack currently doesn't seem to work!" );
       console.log( "[EngineWrapper/RouterFacet] goingBack." );
-      this.location.pathname = this._ME_previousLocations[this._ME_previousLocations.length - 2];
-      window.engine.bindings[`facet:updated:core.router`]( _ME_Facets["core.router"] );
-      this._ME_previousLocations.pop();
+      this.list.pop();
+      window.engine.bindings[ `facet:updated:core.router` ]( _ME_Facets[ "core.router" ] );
     },
     push(path) {
       this.action = "PUSH";
-      this._ME_previousLocations.push( this.location.pathname );
+      this.list.push(
+        {
+          hash: "",
+          search: "",
+          state: "",
+          pathname: path,
+        },
+      );
+
       console.log( "[EngineWrapper/RouterFacet] pushing path to " + path );
-      this.location.pathname = path;
-      window.engine.bindings[`facet:updated:core.router`]( _ME_Facets["core.router"] );
+      window.engine.bindings[ `facet:updated:core.router` ]( _ME_Facets[ "core.router" ] );
     },
   },
 };
@@ -119,37 +138,6 @@ const loadFacet = async (facet) => {
 
   console.log( "[EngineWrapper] Facet Loaded: " + facet, f );
   _ME_Facets[facet] = f;
-};
-
-const facets = JSON.parse(fs.readFileSync( "./src/facets.json" ));
-(async() => {
-  for (const facet of facets) await loadFacet( facet );
-  window.engine.WindowLoaded = true;
-})();
-
-const toFunction = (o) => {
-  if (typeof o == "object") {
-    for (let obj in o) {
-      let ob = o[obj];
-      if (ob?.function) {
-        o[obj] = new Function( ob.arguments, ob.body );
-      } else if (typeof o == "object") {
-        toFunction( ob );
-      };
-    };
-  };
-
-  return o;
-};
-
-if (Config.use_translation) {
-  console.log(
-    "[EngineWrapper] Actual Translation Support was enabled (USE_TRANSLATIONS). Loading " + Config.locale + ".lang file..."
-  );
-
-  const locdat = fs.readFileSync( "./src/texts/" + Config.locale + ".lang" ).toString();
-  for (const item of locdat.split( "\n" ))
-  _ME_Translations[item.split( "=" )[0]] = item.split( "=" )[1]?.replace( "\r", "" );
 };
 
 window.engine = {
@@ -183,24 +171,115 @@ window.engine = {
   },
 };
 
+const facets = JSON.parse(fs.readFileSync( "./src/facets.json" ));
+(
+  async() => {
+    for (const facet of facets) await loadFacet( facet );
+    window.engine.WindowLoaded = true;
+  }
+)();
+
+const toFunction = (o) => {
+  if (typeof o == "object") {
+    for (let obj in o) {
+      let ob = o[obj];
+      if (ob?.function) {
+        o[obj] = new Function( ob.arguments, ob.body );
+      } else if (typeof o == "object") {
+        toFunction( ob );
+      };
+    };
+  };
+
+  return o;
+};
+
+if (Config.use_translation) {
+  console.log(
+    "[EngineWrapper] Actual Translation Support was enabled (USE_TRANSLATIONS). Loading " + Config.locale + ".lang file..."
+  );
+
+  const locdat = fs.readFileSync( "./src/texts/" + Config.locale + ".lang" ).toString();
+  for (const item of locdat.split( "\n" ))
+  _ME_Translations[item.split( "=" )[0]] = item.split( "=" )[1]?.replace( "\r", "" );
+};
+
 window.addEventListener(
 	"DOMContentLoaded",
 	() => {
-		document.getElementsByTagName( "body" )[0].style = `background-image: url("/src/assets/panorama.png"); background-size: cover; user-select: none;`;
+		document.getElementsByTagName( "body" )[0].style = "user-select: none;";
 		
-		const styleEl = document.createElement("style");
-		document.head.appendChild(styleEl);
+    const link = document.createElement( "link" );
+    link.href = "/node_modules/@hatchibombotar/cubemap/lib/index.css";
+    link.type = "text/css";
+    link.rel = "stylesheet";
+    document.getElementsByTagName( "head" )[0].appendChild( link );
+
+    const info = document.createElement( "div" );
+    info.style = "position: absolute;z-index: 1000;width: 100%;"
+    //document.body.appendChild( info );
+
+    const times = [];
+    let fps;
+    setInterval(
+      () => window.requestAnimationFrame(
+        () => {
+          const now = performance.now();
+          while (
+            times.length > 0
+            && times[0] <= now - 1000
+          ) times.shift();
+          times.push(now);
+          fps = times.length;
+        },
+      ),
+    );
+
+    setInterval(
+      () => {
+        info.innerHTML = (
+          `<div style="margin: auto;color: #545454;font-family: 'Minecraft Seven v2';font-size: 14px;font-weight: bold;text-align: center;line-height: 16px;">
+            <div>OreUI - ${window.clientInformation.platform} Build, Intel(R) UHD Graphics, Win 10.0.22000.2295</div>
+            <div>FPS: ${fps.toFixed(1)}, GUI Scale: 0.0, Resolution: ${window.innerWidth}x${window.innerHeight}</div>
+          </div>`
+        );
+      }, 1000,
+    );
+
+    new Cubemap(
+      document.getElementsByTagName( "body" )[0],
+      [
+          "/src/assets/cubemap/front.png",
+          "/src/assets/cubemap/right.png",
+          "/src/assets/cubemap/back.png",
+          "/src/assets/cubemap/left.png",
+          "/src/assets/cubemap/top.png",
+          "/src/assets/cubemap/bottom.png",
+      ],
+      {
+        width: "auto",
+        height: "100%",
+        perspective: 350,
+        rotate_type: "auto",
+        rotate_speed: 2.5,
+      },
+    );
+
+		const styleEl = document.createElement( "style" );
+		document.head.appendChild( styleEl );
 		
 		const styleSheet = styleEl.sheet;
-		
+		styleSheet.insertRule( `#root { position: absolute; z-index: 1000; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `::-webkit-scrollbar { width: 0; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `input { outline: none; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `.RdcBM { flex-wrap: unset; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `.OnsGF { height: fit-content; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `.ekhCp { overflow: auto; }`, styleSheet.cssRules.length );
-		styleSheet.insertRule( `.iWrTh, .vPqz2, .XiGeZ, .MneaI, .c_o_5, .oQouW, .P3s5b, .nDjUk, .T3q0T { width: auto; }`, styleSheet.cssRules.length );
+		styleSheet.insertRule( `.iWrTh,.vPqz2,.XiGeZ,.MneaI,.c_o_5,.oQouW,.P3s5b,.nDjUk,.T3q0T,.R8eUQ,.BLVBU,.b_Dcf { width: auto; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `.nUoyP { height: 1.5rem; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `.uHy0P { min-height: 2.8rem; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `.mbdeF { width: auto; min-width: auto; }`, styleSheet.cssRules.length );
+    styleSheet.insertRule( `.qUBzu { height: fit-content; }`, styleSheet.cssRules.length );
+    styleSheet.insertRule( `.JcX32 { padding-bottom: 12px;margin-bottom: -12px; }`, styleSheet.cssRules.length );
 	},
 );

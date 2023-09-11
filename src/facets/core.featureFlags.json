@@ -13,6 +13,9 @@
         "vanilla.enableBehaviorPacksTab",
         "vanilla.enableResourcePacksTab",
         "vanilla.enableResourcePacksRealmsPlusFeatureFlag",
-        "vanilla.editor.enableUI"
+        "vanilla.editor.enableUI",
+        "vanilla.settings.unlockRecipes",
+        "vanilla.serverTab",
+        "vanilla.friendsDrawer"
     ]
 }
