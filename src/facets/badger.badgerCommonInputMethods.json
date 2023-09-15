@@ -1,7 +1,0 @@
-{
-    "setUIIsGamepad": {
-        "function": true,
-        "arguments": "t",
-        "body": "return true;"
-    }
-}

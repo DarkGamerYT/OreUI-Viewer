@@ -1,7 +1,0 @@
-{
-    "setUpdateWorldListState": {
-        "function": true,
-        "arguments": "",
-        "body": "console.log(`[EngineWrapper/BadgerNetworkWorldsMethodsFacet] setUpdateWorldListState()`);"
-    }
-}

@@ -1,0 +1,1 @@
+module.exports = { currentStoryId: 0 };

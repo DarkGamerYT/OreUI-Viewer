@@ -1,9 +1,0 @@
-{
-	"isBusy": false,
-	"selectedRealmIndex": 0,
-	"showConfirmationModal": {
-        "function": true,
-        "arguments": "",
-        "body": ""
-    }
-}

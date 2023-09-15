@@ -1,0 +1,1 @@
+module.exports = { doNotShowEntitlementsWarning: false, doNotShowOldWorldsWarning: false };

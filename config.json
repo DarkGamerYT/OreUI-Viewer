@@ -1,5 +1,7 @@
 {
-    "pathname": "/create-new-world",
-    "use_translation": true,
-    "locale": "en_US"
+	"pathname": "/first-time-sign-in",
+	"file": "/hbui/index.html",
+	"panorama": "beta",
+	"use_translation": true,
+	"locale": "en_US"
 }

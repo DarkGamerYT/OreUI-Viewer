@@ -1,7 +1,0 @@
-{
-    "openBannedInfoPage": {
-        "function": true,
-        "arguments":"",
-        "body":"console.log(\"[EngineWrapper/PlayerBannedFacet] openBannedInfoPage()\");"
-    }
-}

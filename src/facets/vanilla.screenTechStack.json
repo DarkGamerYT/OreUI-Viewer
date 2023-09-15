@@ -1,7 +1,0 @@
-{
-    "selectTechStackForScreen": {
-        "function": true,
-        "arguments": "",
-        "body": "console.log(\"[EngineWrapper/VanillaScreenTechStack] selectTechStackForScreen()\");"
-    }
-}

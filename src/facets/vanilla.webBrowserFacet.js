@@ -1,0 +1,1 @@
+module.exports = { openLink: () => console.log( "[EngineWrapper/VanillaWebBrowserFacet] openLink()" ) };

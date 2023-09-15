@@ -1,0 +1,1 @@
+module.exports = { deathInfo: "xKingDark died." };
