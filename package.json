@@ -1,9 +1,14 @@
 {
-	"name": "oreui",
-	"author": "xKingDark",
+	"name": "oreui-viewer",
+	"author": { "name": "xKingDark" },
 	"version": "1.0.0",
-	"description": "",
+	"description": "OreUI Viewer is an app that allows users to load OreUI screens outside the game.",
 	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/DarkGamerYT/OreUI-Viewer"
+	},
+	"main": "index.js",
 	"scripts": {
 		"start": "electron ./index.js",
 		"start-nogpu": "electron ./index.js --disable-gpu"
