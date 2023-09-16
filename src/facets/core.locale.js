@@ -3,7 +3,7 @@ const Config = require( "../../config.json" );
 let translations = {};
 if (Config.use_translation) {
 	console.log(
-		"[EngineWrapper] Loading " + Config.locale + ".lang file..."
+		"[EngineWrapper/LocaleFacet] Loading " + Config.locale + ".lang file..."
 	);
 
 	const locdat = fs.readFileSync( "./src/texts/" + Config.locale + ".lang" ).toString();
@@ -28,4 +28,4 @@ module.exports = {
 	},
 	
 	formatDate: (timestampInSeconds) => new Date( timestampInSeconds * 1000 ).toLocaleDateString(),
-}
+};

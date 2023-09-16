@@ -7,6 +7,7 @@ module.exports = {
         major: 1,
         minor: 20,
         patch: 40,
-        revision: 21
+        revision: 21,
+        isBeta: true
     }
 };

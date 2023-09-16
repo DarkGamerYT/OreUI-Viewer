@@ -1,5 +1,5 @@
 # OreUI Viewer
-Engine created by [Candela](https://github.com/Luminoso-256/oreUIShim).
+Engine created with the help of [Candela](https://github.com/Luminoso-256/oreUIShim) & [Mojang's React Facet Docs](https://react-facet.mojang.com/)
 
 ## How to use
 
@@ -23,6 +23,7 @@ oreui
 │   └───texts
 │   │   │   <oreui text files>
 │   │   facets.json
+│   │   types.js
 │
 └───hbui
 │   │   <subfolders>

@@ -24,8 +24,8 @@ module.exports = {
 				state: "",
 			});
 
-			if (this.action == "REPLACE") console.log( "[EngineWrapper/RouterFacet] Replacing path to " + path );
-			else console.log( "[EngineWrapper/RouterFacet] Pushing path to " + path );
+			if (this.action == "REPLACE") console.log( `[EngineWrapper/RouterFacet] Replacing path (${path})` );
+			else console.log( `[EngineWrapper/RouterFacet] Pushing path (${path})` );
 			window.engine.bindings[ `facet:updated:core.router` ]( window.engine.facets[ "core.router" ] );
 		},
 

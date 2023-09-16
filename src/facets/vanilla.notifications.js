@@ -1,1 +1,1 @@
-module.exports = { queueSnackbar: (text) => {} };
+module.exports = { queueSnackbar: (msg) => console.log( "Snack bar message:", msg ) };
