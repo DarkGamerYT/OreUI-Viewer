@@ -54,4 +54,21 @@ const StorageType = {
     APPDATA: 2,
 };
 
-module.exports = { ScreenType, HandheldDeviceType, InputMethod, ARVRPlatform, Platform, Controller, StorageType };
+const RealmPlayerRoleEnum = {
+    NONMEMBER: -1,
+    VISITOR: 0,
+    MEMBER: 1,
+    OPERATOR: 2,
+    OWNER: 3,
+};
+
+module.exports = {
+    ScreenType,
+    HandheldDeviceType,
+    InputMethod,
+    ARVRPlatform,
+    Platform,
+    Controller,
+    StorageType,
+    RealmPlayerRoleEnum,
+};

@@ -92,7 +92,7 @@ window.addEventListener(
 		styleSheet.insertRule( `.RdcBM { flex-wrap: unset; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `.OnsGF,.qUBzu { height: fit-content; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `.ekhCp { overflow: auto; }`, styleSheet.cssRules.length );
-		styleSheet.insertRule( `.iWrTh,.vPqz2,.XiGeZ,.MneaI,.c_o_5,.oQouW,.P3s5b,.nDjUk,.T3q0T,.R8eUQ,.BLVBU,.b_Dcf { width: auto; }`, styleSheet.cssRules.length );
+		styleSheet.insertRule( `.iWrTh,.vPqz2,.XiGeZ,.MneaI,.c_o_5,.oQouW,.P3s5b,.nDjUk,.T3q0T,.R8eUQ,.BLVBU,.b_Dcf,.YZFU6,.An2ie { width: auto; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `.nUoyP { height: 1.5rem; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `.uHy0P { min-height: 2.8rem; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `.mbdeF { width: auto; min-width: auto; }`, styleSheet.cssRules.length );

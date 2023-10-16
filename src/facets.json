@@ -50,6 +50,7 @@
     "vanilla.RealmListFacet",
     "vanilla.realmSlots",
     "vanilla.realmsStories.actions",
+    "vanilla.realmsStories.localScreenshots",
     "vanilla.realmsStories.persistentData",
     "vanilla.realmsStories.players",
     "vanilla.realmsStories.realmData",
