@@ -6,8 +6,8 @@ module.exports = {
     currentGameVersion: {
         major: 1,
         minor: 20,
-        patch: 40,
-        revision: 21,
+        patch: 50,
+        revision: 23,
         isBeta: true
     }
 };

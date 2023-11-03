@@ -1,6 +1,14 @@
 module.exports = {
+    saveLocalWorldProgress: 0,
+    currentWorldId: 1234567890,
+    addWorld: () => console.log("[EngineWrapper/WorldEditorFacet] addWorld();"),
     closeWorld: () => {},
     deleteWorld: () => {},
+    startSaveLocalWorld: (worldId) => {},
+    startLocalWorld: {
+        run: (worldId) => {},
+        clear: () => {}
+    },
     loadWorld: {
         run: () => {},
         clear: () => {}

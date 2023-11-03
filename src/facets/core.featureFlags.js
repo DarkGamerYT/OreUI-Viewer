@@ -4,8 +4,10 @@ module.exports = {
         "vanilla.settings.unlockRecipes",
         "vanilla.serverTab",
         "vanilla.friendsDrawer",
+        "vanilla.debugDrawer",
         "vanilla.editor.enableUI",
         "vanilla.editor.reload",
         "vanilla.editor.paneCollapseAPI",
+        "core.hasRealmsEnabled",
     ],
 };

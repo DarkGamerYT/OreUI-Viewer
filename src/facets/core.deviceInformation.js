@@ -1,5 +1,5 @@
-const { Platform, InputMethod, ARVRPlatform, StorageType } = require( __dirname + "/../types.js" );
-const IS_TOUCH_DEVICE =  false && 0;
+const { Platform, InputMethod, ARVRPlatform, StorageType } = require(  "../types.js" );
+const IS_TOUCH_DEVICE =  false;
 const DEFAULT_PLATFORM = IS_TOUCH_DEVICE ? Platform.IOS : Platform.WIN32;
 const GUI_SCALE_VALUES = [1, 2, 3, 4, 5, 6, 7, 8];
 const getGuiScaleIndexForLargeScreen = (width, height) => {

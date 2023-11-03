@@ -4,14 +4,14 @@ module.exports = {
         {
             xuid: "1",
             gamerTag: "xKingDark",
-            gamerIcon: "",
+            gamerIcon: "/src/assets/mc.png",
             isOnline: true,
             isCurrentlyPlaying: true
         },
         {
             xuid: "2",
             gamerTag: "xKingDark",
-            gamerIcon: "",
+            gamerIcon: "/src/assets/mcpreview.png",
             isOnline: false,
             isCurrentlyPlaying: false
         }
