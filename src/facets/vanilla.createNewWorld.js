@@ -14,6 +14,7 @@ const experimentals = () => {
 
     return experiments;
 };
+
 module.exports = {
     isEditorWorld: false,
     isUsingTemplate: false,
@@ -36,10 +37,11 @@ module.exports = {
         general: {
             worldName: "Test World",
             difficulty: 3,
-            gameMode: 1
+            gameMode: 0,
+            isHardcore: true,
         },
         advanced: {
-            useFlatWorld: true,
+            useFlatWorld: false,
             simulationDistance: 8,
             startWithMap: false,
             bonusChest: false,
@@ -59,7 +61,29 @@ module.exports = {
             cheatsEnabled: false,
             tickSpeed: 1
         },
-        betaFeatures: [ ...(experimentals()) ],
+        betaFeatures: [
+            {
+                id: "0",
+                title: "Gameplay Test",
+                description: "Hello!",
+                isEnabled: false,
+                category: 0
+            },
+            {
+                id: "0",
+                title: "Add-on Creators Test",
+                description: "Hello!",
+                isEnabled: false,
+                category: 1
+            },
+            {
+                id: "0",
+                title: "Internal Test",
+                description: "Hello!",
+                isEnabled: false,
+                category: 2
+            }
+        ],
         multiplayer: {
             generalWarningState: 0,
             multiplayerSupported: true,
@@ -75,6 +99,6 @@ module.exports = {
         },
         scriptingCoding: {
             codeBuilderEnabled: true
-        }
-    }
+        },
+    },
 };

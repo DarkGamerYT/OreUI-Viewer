@@ -1,3 +1,4 @@
+require("v8-compile-cache");
 require( "@electron/remote/main" ).initialize();
 const {
 	app,

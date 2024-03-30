@@ -1,28 +1,11 @@
 module.exports = {
-    saveLocalWorldProgress: 0,
-    currentWorldId: 1234567890,
-    addWorld: () => console.log("[EngineWrapper/WorldEditorFacet] addWorld();"),
-    closeWorld: () => {},
-    deleteWorld: () => {},
-    startSaveLocalWorld: (worldId) => {},
-    startLocalWorld: {
-        run: (worldId) => {},
-        clear: () => {}
-    },
-    loadWorld: {
-        run: () => {},
-        clear: () => {}
-    },
-    duplicateWorld: {
-        run: () => {},
-        clear: () => {},
-        result: null
-    },
+    currentWorldId: "test",
     worldData: {
         general: {
             worldName: "Test World",
             gameMode: 0,
-            difficulty: 1
+            difficulty: 1,
+            isHardcore: true,
         },
         advanced: {
             worldSeed: "Test World Seed :D",
@@ -94,143 +77,21 @@ module.exports = {
     },
     worldSummary: {
         fileSize: "300 MB",
-        lastPlayed: "2 Jan 2023",
+        lastPlayed: "15 March 2024",
         worldIconPath: ""
     },
-    saveLocalWorld: {
-        run: () => {},
-        clear: () => {},
-        cancel: () => true,
-        result: null,
-        state: 0
-    },
-    activatePack: {
-        run: () => {},
-        clear: () => {},
-        result: null
-    },
-    deactivatePack: {
-        run: () => {},
-        clear: () => {},
-        result: null
-    },
-    activatePackContinue: {
-        run: () => {},
-        clear: () => {},
-        result: null
-    },
-    deactivatePackContinue: {
-        run: () => {},
-        clear: () => {},
-        result: null
-    },
-    changePackPriority: {
-        run: () => {},
-        clear: () => {},
-        result: null
-    },
-    downloadPack: {
-        run: () => {},
-        clear: () => {},
-        cancel: () => true,
-        result: null,
-        state: 0
-    },
     isAchievementsEditDisabled: false,
-    worldPacks: {
-        texturePacks: {
-            activeGlobal: [
-                {
-                    id: "0",
-                    contentId: "0",
-                    name: "Test Pack #0",
-                    creator: "xKingDark",
-                    description: "Test",
-                    size: "3.5MB",
-                    image: "/src/assets/mc.png",
-                    isMarketplaceItem: true,
-                    isPlatformLocked: false,
-                    hasSettings: true
-                }
-            ],
-            active: [
-                {
-                    id: "1",
-                    contentId: "1",
-                    name: "Test Pack #1",
-                    creator: "xKingDark",
-                    description: "Test",
-                    size: "3.5MB",
-                    image: "/src/assets/mc.png",
-                    isMarketplaceItem: true,
-                    isPlatformLocked: false,
-                    hasSettings: true
-                }
-            ],
-            available: [
-                {
-                    id: "2",
-                    contentId: "2",
-                    name: "Test Pack #2",
-                    creator: "xKingDark",
-                    description: "Test",
-                    size: "3.5MB",
-                    image: "/src/assets/mcpreview.png",
-                    isMarketplaceItem: true,
-                    isPlatformLocked: false,
-                    hasSettings: true
-                }
-            ],
-            realms: [
-                {
-                    id: "3",
-                    contentId: "3",
-                    name: "Test Pack #3",
-                    creator: "xKingDark",
-                    description: "Test",
-                    size: "3.5MB",
-                    image: "/src/assets/mcpreview.png",
-                    isMarketplaceItem: true,
-                    isPlatformLocked: false,
-                    hasSettings: true
-                }
-            ],
-            unowned: []
-        },
-        behaviorPacks: {
-            active: [
-                {
-                    id: "0",
-                    contentId: "0",
-                    name: "Test Pack #0",
-                    creator: "xKingDark",
-                    description: "Test",
-                    size: "3.5MB",
-                    image: "/src/assets/mc.png",
-                    isMarketplaceItem: true,
-                    isPlatformLocked: false,
-                    hasSettings: true
-                }
-            ],
-            available: [
-                {
-                    id: "1",
-                    contentId: "1",
-                    name: "Test Pack #1",
-                    creator: "xKingDark",
-                    description: "Test",
-                    size: "3.5MB",
-                    image: "/src/assets/mcpreview.png",
-                    isMarketplaceItem: true,
-                    isPlatformLocked: false,
-                    hasSettings: true
-                }
-            ]
-      },
-      realmsPlusSupported: true,
-      realmsSubscriber: true,
-      sharedPacks: false
-    },
-    downloadPackActionProgress: 0,
-    downloadPackActionStatus: 0
+    worldIsInitialized: true,
+    closeWorld: () => {},
+    loadWorld: () => {},
+    addWorld: () => {},
+    saveLocalWorld: () => {},
+    clearSaveLocalWorldTaskState: () => {},
+    saveLocalWorldError: undefined,
+    saveLocalWorldTaskState: 0,
+    loadWorldError: undefined,
+    loadWorldTaskState: 0,
+    isEditorWorld: false,
+    worldHasBeenModified: false,
+    reloadWorld: () => {}
 };

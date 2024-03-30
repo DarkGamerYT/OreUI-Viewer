@@ -1,37 +1,24 @@
 module.exports = {
-    isLoaded: true,
-    friends: [
+    loadingState: 2,
+    xblFriends: [
         {
             xuid: "1",
-            gamerTag: "xKingDark",
-            gamerIcon: "/src/assets/mc.png",
+            gamerTag: "Random User",
+            gamerIcon: "/src/assets/placeholder_gamertag.png",
             isOnline: true,
-            isCurrentlyPlaying: true
+            isCurrentlyPlaying: true,
+            playingOnServerId: undefined,
+            titleHistory: 2,
         },
         {
             xuid: "2",
-            gamerTag: "xKingDark",
+            gamerTag: "MrDirt",
             gamerIcon: "/src/assets/mcpreview.png",
-            isOnline: false,
-            isCurrentlyPlaying: false
-        }
-    ],
-    incomingRequests: [
-        {
-            xuid: "1",
-            gamerTag: "xKingDark",
-            gamerIcon: "",
             isOnline: true,
-            isCurrentlyPlaying: true
-        }
+            isCurrentlyPlaying: true,
+            playingOnServerId: "test",
+            titleHistory: 2,
+        },
     ],
-    outgoingRequests: [
-        {
-            xuid: "1",
-            gamerTag: "xKingDark",
-            gamerIcon: "",
-            isOnline: true,
-            isCurrentlyPlaying: true
-        }
-    ]
+    platformFriends: [],
 };

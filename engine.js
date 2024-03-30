@@ -1,3 +1,4 @@
+require("v8-compile-cache");
 const fs = require( "fs" );
 const { Cubemap } = require( "./libs/@hatchibombotar-cubemap" );
 const Config = require( "./config.json" );
@@ -90,9 +91,13 @@ window.addEventListener(
 		styleSheet.insertRule( `::-webkit-scrollbar { width: 0; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `input { outline: none; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `.RdcBM { flex-wrap: unset; }`, styleSheet.cssRules.length );
-		//styleSheet.insertRule( `.OnsGF,.qUBzu { height: fit-content; }`, styleSheet.cssRules.length );
-		styleSheet.insertRule( `.ekhCp { overflow: auto; }`, styleSheet.cssRules.length );
-		styleSheet.insertRule( `.iWrTh,.vPqz2,.XiGeZ,.MneaI,.c_o_5,.oQouW,.P3s5b,.nDjUk,.T3q0T,.R8eUQ,.BLVBU,.b_Dcf,.YZFU6,.An2ie { width: auto; }`, styleSheet.cssRules.length );
+		styleSheet.insertRule(
+			`.iWrTh,.vPqz2,.XiGeZ,.MneaI,`
+			+ `.c_o_5,.oQouW,.P3s5b,.nDjUk,`
+			+ `.T3q0T,.R8eUQ,.BLVBU,.b_Dcf,`
+			+ `.YZFU6,.An2ie,.r1fl4 `
+			+ `{ width: auto; }`, styleSheet.cssRules.length 
+		);
 		styleSheet.insertRule( `.nUoyP { height: 1.5rem; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `.uHy0P { min-height: 2.8rem; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `.mbdeF { width: auto; min-width: auto; }`, styleSheet.cssRules.length );
@@ -100,5 +105,8 @@ window.addEventListener(
 		styleSheet.insertRule( `.IxVml { margin-left: -17%; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `.X5AON { display: none; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `.CXtm9 { gap: 6px; text-align: center; }`, styleSheet.cssRules.length );
+		styleSheet.insertRule( `.yRhRU .qA9dD { height: 100%; width: 100%; }`, styleSheet.cssRules.length );
+		styleSheet.insertRule( `.ekhCp { height: fit-content; min-height: 100%; }`, styleSheet.cssRules.length );
+		styleSheet.insertRule( `.UedOa { overflow-y: auto; padding-right: 10px; }`, styleSheet.cssRules.length );
 	},
 );

@@ -1,13 +1,18 @@
 module.exports = {
     flags: [
+        "core.hasRealmsEnabled",
         "vanilla.achievementsReward",
-        "vanilla.settings.unlockRecipes",
-        "vanilla.serverTab",
-        "vanilla.friendsDrawer",
+        "vanilla.contentSubscription",
         "vanilla.debugDrawer",
         "vanilla.editor.enableUI",
         "vanilla.editor.reload",
-        "vanilla.editor.paneCollapseAPI",
-        "core.hasRealmsEnabled",
+        "vanilla.enableMarketplacePass",
+        "vanilla.enableFeedbackLanding",
+        "vanilla.friendsDrawer",
+        "vanilla.hardcoreMode",
+        "vanilla.playScreenRealmsTab",
+        "vanilla.serverTab",
+        "vanilla.settings.unlockRecipes",
+        "vanilla.templateScreen"
     ],
 };

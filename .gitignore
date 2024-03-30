@@ -1,6 +1,7 @@
 .DS_Store
 ._*
 hbui
+hbui-docs
 src/texts
 node_modules
 package-lock.json

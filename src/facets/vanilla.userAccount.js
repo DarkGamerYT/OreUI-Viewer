@@ -1,13 +1,27 @@
 module.exports = {
-    isBanned: false,
-    banReason: "Test",
-    banExpiration: "",
-    isTrialAccount: false,
-    isAllowedToAddFriends: true,
-    isLoggedInWithMicrosoftAccount: true,
     hasPremiumNetworkAccess: true,
+    isLoggedInWithMicrosoftAccount: true,
+    isTrialAccount: false,
     hasValidCrossPlatformSkin: true,
-    isParentalPermissionRequiredForMultiplayer: false,
-    showPremiumNetworkUpsellModal: () => console.log( "[EngineWrapper/UserAccountFacet] showPremiumNetworkUpsellModal()" ),
-    showMicrosoftAccountLogInScreen: () => console.log( "[EngineWrapper/UserAccountFacet] showMicrosoftAccountLogInScreen()" )
+    isBanned: false,
+    banReason: "",
+    banExpiration: "",
+    showPremiumNetworkUpsellModal: () => {},
+    userPermissions: {
+        multiplayer: {
+            denyReasons: [],
+            allowed: true
+        },
+        addFriends: {
+            denyReasons: [],
+            allowed: true
+        },
+        viewProfiles: {
+            denyReasons: [],
+            allowed: true
+        }
+    },
+    isSignedInPlatformNetwork: true,
+    signOutOfMicrosoftAccount: () => {},
+    manageMicrosoftAccount: () => {},
 };

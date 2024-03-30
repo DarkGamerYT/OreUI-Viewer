@@ -1,16 +1,18 @@
 module.exports = {
-    deactivatePackContinue: () => undefined,
-    activatePackContinue: () => undefined,
+    loadPacksData: () => {},
+    continuePackActivation: () => undefined,
+    continuePackDeactivation: () => undefined,
     changePackPriority: () => undefined,
     activatePack: () => undefined,
     deactivatePack: () => undefined,
-    startPackDownload: () => {},
+    downloadPacks: () => {},
     cancelPackDownload: () => {},
-    loadPackData: () => {},
     packDownloadProgress: 0,
+    packDownloadName: "Test",
     packDownloadError: undefined,
     packDownloadStatus: 0,
-    worldPackData: {
+    packDownloadTaskState: 0,
+    worldPacksData: {
         texturePacks: {
             global: [
                 {
@@ -103,5 +105,11 @@ module.exports = {
         realmsPlusSupported: true,
         realmsSubscriber: true,
         sharedPacks: false
-    }
+    },
+    isInitialized: true,
+    getPackSizes: () => {},
+    getPackSizesReset: () => {},
+    lastConsultedPackSizesError: undefined,
+    lastConsultedPackSizesTaskState: 0,
+    lastConsultedPackSizes: ""
 };

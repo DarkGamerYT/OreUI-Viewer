@@ -23,5 +23,7 @@ module.exports = {
     setRealmNotificationStatus: (state) => {},
     postSettings: () => {},
     fetchSettings: () => {},
-    consumeSettingsState: () => {}
+    consumeSettingsState: () => {},
+    loadStoriesSlice: (start, end) => {},
+    clearSettingsStatus: () => {}
 };
