@@ -1,12 +1,12 @@
 module.exports = {
     isDevBuild: true,
     isEduBuild: false,
-    isPreviewBuild: true,
+    isPreviewBuild: false,
     currentGameVersion: {
         major: 1,
-        minor: 20,
-        patch: 80,
-        revision: 22,
+        minor: 21,
+        patch: 0,
+        revision: 23,
         isBeta: true
     },
 };

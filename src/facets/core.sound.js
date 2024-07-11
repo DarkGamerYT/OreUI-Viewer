@@ -1,5 +1,5 @@
 const fs = require( "node:fs" );
-module.exports = {
+module.exports = () => ({
 	play: (id) => {
 		console.log( `[EngineWrapper/SoundFacet] Sound ${id} requested.` );
         const soundDefinitions = fs.readFileSync( __dirname + "/../../hbui/sound_definitions.json" );
@@ -12,4 +12,4 @@ module.exports = {
             audio.play();
         };
 	},
-};
+});

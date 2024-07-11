@@ -58,36 +58,34 @@ module.exports = {
         ],
         unowned: []
     },
-    behaviorPacks: {
-        active: [
-            {
-                id: "0",
-                contentId: "0",
-                name: "Test Pack #0",
-                creator: "xKingDark",
-                description: "Test",
-                size: "3.5MB",
-                image: "/src/assets/mc.png",
-                isMarketplaceItem: true,
-                isPlatformLocked: false,
-                hasSettings: true
-            }
-        ],
-        available: [
-            {
-                id: "1",
-                contentId: "1",
-                name: "Test Pack #1",
-                creator: "xKingDark",
-                description: "Test",
-                size: "3.5MB",
-                image: "/src/assets/mcpreview.png",
-                isMarketplaceItem: true,
-                isPlatformLocked: false,
-                hasSettings: true
-            }
-        ]
-    },
+    activeBehaviorPacks: [
+        {
+            id: "0",
+            contentId: "0",
+            name: "Test Pack #0",
+            creator: "xKingDark",
+            description: "Test",
+            size: "3.5MB",
+            image: "/src/assets/mc.png",
+            isMarketplaceItem: true,
+            isPlatformLocked: false,
+            hasSettings: true
+        }
+    ],
+    availableBehaviorPacks: [
+        {
+            id: "1",
+            contentId: "1",
+            name: "Test Pack #1",
+            creator: "xKingDark",
+            description: "Test",
+            size: "3.5MB",
+            image: "/src/assets/mcpreview.png",
+            isMarketplaceItem: true,
+            isPlatformLocked: false,
+            hasSettings: true
+        }
+    ],
     status: 0,
     downloadProgress: 0.5,
     importProgress: 0.1,

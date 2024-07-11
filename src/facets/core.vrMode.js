@@ -1,1 +1,1 @@
-module.exports = { mode: 0 };
+module.exports = () => ({ mode: 0 });

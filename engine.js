@@ -18,29 +18,53 @@ globalThis.engine = {
 	facets: loadedFacets,
 	bindings: {},
 	WindowLoaded: false,
-	BindingsReady: (...version) => console.log( `[EngineWrapper] BindingsReady called (v${version.join(".")})` ),
-	AddOrRemoveOnHandler: (id, func) => engine.bindings[ id ] = func,
-	AddOrRemoveOffHandler: (id) => delete engine.bindings[id],
+	BindingsReady: (...version) => console.log(`[EngineWrapper] BindingsReady called (v${version.join(".")})`),
+	on: (id, func) => engine.bindings[id] = func,
+	off: (id) => delete engine.bindings[id],
+	RemoveOnHandler: (id, func, _) => console.log(`[EngineWrapper] RemoveOnHandler for ID ${id}. func: ${func}`),
+	trigger: (id, query, requestId, parameters) => {
+		while(true) {
+			if (!engine.WindowLoaded) continue;
+			switch (id) {
+				case "facet:request":
+					if (engine.facets.hasOwnProperty(query)) {
+						console.log(`[EngineWrapper] Sending Facet: ${query}`);
+						if (requestId !== undefined) {
+							console.log(id, query, requestId, parameters);
+							engine.bindings["facet:updated:" + requestId](engine.facets[query](parameters));
+						} else engine.bindings["facet:updated:" + (query)](engine.facets[query]);
+					} else {
+						console.error(`[EngineWrapper] MISSING FACET: ${query}`);
+						try { engine.bindings["facet:error:" + (requestId ?? query)](engine.facets[query]); } catch {};
+					};
+				break;
+				case "core:exception": console.error(`[EngineWrapper] OreUI has reported exception: ${query}`); break;
+				default: console.warn(`[EngineWrapper] OreUI triggered ${id} but we don't handle it!`); break;
+			};
+
+			return;
+		};
+	},
 	TriggerEvent: {
 		apply: (_, [ id, facet ]) => {
-			const interval = setInterval(() => {
-				if (!engine.WindowLoaded) return;
-				clearInterval(interval);
-
+			while(true) {
+				if (!engine.WindowLoaded) continue;
 				switch (id) {
 					case "facet:request":
 						if (engine.facets.hasOwnProperty(facet)) {
-							console.log( `[EngineWrapper] Sending Facet: ${facet}` );
-							engine.bindings[ "facet:updated:" + facet ]( engine.facets[facet] );
+							console.log(`[EngineWrapper] Sending Facet: ${facet}`);
+							engine.bindings["facet:updated:" + facet](engine.facets[facet]);
 						} else {
-							console.error( `[EngineWrapper] MISSING FACET: ${facet}` );
-							engine.bindings[ "facet:error:" + facet ]( engine.facets[facet] );
+							console.error(`[EngineWrapper] MISSING FACET: ${facet}`);
+							engine.bindings["facet:error:" + facet](engine.facets[facet]);
 						};
 					break;
-					case "core:exception": console.error( `[EngineWrapper] OreUI has reported exception: ${facet}` ); break;
-					default: console.warn( `[EngineWrapper] OreUI triggered ${id} but we don't handle it!` ); break;
+					case "core:exception": console.error(`[EngineWrapper] OreUI has reported exception: ${facet}`); break;
+					default: console.warn(`[EngineWrapper] OreUI triggered ${id} but we don't handle it!`); break;
 				};
-			});
+
+				return;
+			};
 		},
 	},
 };
@@ -49,6 +73,39 @@ const facets = JSON.parse(fs.readFileSync( __dirname + "/src/facets.json" ));
 (async() => {
 	for (const facet of facets) await loadFacet( facet );
 	engine.WindowLoaded = true;
+
+	/*
+						engine.bindings["Editor::ServerUXEvents"](JSON.stringify({
+							type: 7,
+							id: require("node:crypto").randomUUID(),
+							icon: "",
+							enabled: true,
+							visible: true,
+							tooltipData: {
+								descriptionString: "",
+							},
+							toolGroupId: "",
+							paneId: "",
+						}));
+						*/
+
+						/*
+						engine.bindings["Editor::ServerUXEvents"](JSON.stringify({
+							type: 1,
+							id: "1d1323db-f34d-456a-81d7-04a79c8dab04",
+							collapsed: false,
+							enabled: true,
+							visible: true,
+							propertyItems: [
+								{
+									paneId: "1d1323db-f34d-456a-81d7-04a79c8dab04",
+									id: require("node:crypto").randomUUID(),
+									property: "empty",
+									typeName: "editorUI:Divider",
+								}
+							]
+						}));
+						*/
 })();
 
 window.addEventListener(
@@ -63,7 +120,7 @@ window.addEventListener(
 		link.rel = "stylesheet";
 		document.getElementsByTagName( "head" )[0].appendChild( link );
 
-		new Cubemap(
+		/*new Cubemap(
 			document.getElementsByTagName( "body" )[0],
 			[
 				"/src/assets/cubemap/" + Config.panorama + "/front.png",
@@ -80,7 +137,7 @@ window.addEventListener(
 				rotate_type: "auto",
 				rotate_speed: 2.5,
 			},
-		);
+		);*/
 
 		//Fix CSS
 		const styleEl = document.createElement( "style" );
@@ -92,10 +149,11 @@ window.addEventListener(
 		styleSheet.insertRule( `input { outline: none; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `.RdcBM { flex-wrap: unset; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule(
-			`.iWrTh,.vPqz2,.XiGeZ,.MneaI,`
-			+ `.c_o_5,.oQouW,.P3s5b,.nDjUk,`
-			+ `.T3q0T,.R8eUQ,.BLVBU,.b_Dcf,`
-			+ `.YZFU6,.An2ie,.r1fl4 `
+			".iWrTh,.vPqz2,.XiGeZ,.MneaI,"
+			+ ".c_o_5,.oQouW,.P3s5b,.nDjUk,"
+			+ ".T3q0T,.R8eUQ,.BLVBU,.b_Dcf,"
+			+ ".YZFU6,.An2ie,.r1fl4,.P6Myy,"
+			+ ".c3aSY "
 			+ `{ width: auto; }`, styleSheet.cssRules.length 
 		);
 		styleSheet.insertRule( `.nUoyP { height: 1.5rem; }`, styleSheet.cssRules.length );
@@ -104,9 +162,12 @@ window.addEventListener(
 		styleSheet.insertRule( `.JcX32 { padding-bottom: 12px;margin-bottom: -12px; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `.IxVml { margin-left: -17%; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `.X5AON { display: none; }`, styleSheet.cssRules.length );
-		styleSheet.insertRule( `.CXtm9 { gap: 6px; text-align: center; }`, styleSheet.cssRules.length );
+		styleSheet.insertRule( `.CXtm9, .jc_nV { gap: 6px; text-align: center; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `.yRhRU .qA9dD { height: 100%; width: 100%; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `.ekhCp { height: fit-content; min-height: 100%; }`, styleSheet.cssRules.length );
 		styleSheet.insertRule( `.UedOa { overflow-y: auto; padding-right: 10px; }`, styleSheet.cssRules.length );
+		styleSheet.insertRule( `.SDIhK, .XwAx9 { align-items: unset; }`, styleSheet.cssRules.length );
+		styleSheet.insertRule( `.JsUBN { gap: 10px; }`, styleSheet.cssRules.length );
+		styleSheet.insertRule( `.mSv3v { text-align: center; }`, styleSheet.cssRules.length );
 	},
 );

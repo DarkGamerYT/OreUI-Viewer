@@ -11,7 +11,7 @@ if (Config.use_translation) {
 	translations[item.split( "=" )[0]] = item.split( "=" )[1]?.replace( "\r", "" );
 };
 
-module.exports = {
+module.exports = () => ({
 	locale: Config.locale,
 	translate: (id) => Config.use_translation ? translations[id]?.split( "#" )[0]?.trim() : id,
 	translateWithParameters: (id, params) => {
@@ -28,4 +28,4 @@ module.exports = {
 	},
 	
 	formatDate: (timestampInSeconds) => new Date( timestampInSeconds * 1000 ).toLocaleDateString(),
-};
+});

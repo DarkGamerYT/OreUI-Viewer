@@ -1,5 +1,5 @@
 const Config = require( "../../config.json" );
-module.exports = {
+module.exports = () => ({
 	history: {
 		length: 0,
 		action: "REPLACE",
@@ -26,4 +26,4 @@ module.exports = {
 
 		push(path) { this.replace(path, "PUSH"); },
 	},
-};
+});

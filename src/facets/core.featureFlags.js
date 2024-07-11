@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
     flags: [
         "core.hasRealmsEnabled",
         "vanilla.achievementsReward",
@@ -15,4 +15,4 @@ module.exports = {
         "vanilla.settings.unlockRecipes",
         "vanilla.templateScreen"
     ],
-};
+});

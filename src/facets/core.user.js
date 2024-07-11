@@ -1,1 +1,1 @@
-module.exports = { isLoggedInWithMicrosoftAccount: true };
+module.exports = () => ({ isLoggedInWithMicrosoftAccount: true });

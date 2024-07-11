@@ -1,1 +1,1 @@
-module.exports = { deathInfo: "xKingDark died." };
+module.exports = () => ({ deathInfo: "xKingDark died." });

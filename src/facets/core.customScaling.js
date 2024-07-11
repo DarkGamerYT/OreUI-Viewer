@@ -1,1 +1,1 @@
-module.exports = { scalingModeOverride: 0, fixedGuiScaleModifier: 0 };
+module.exports = () => ({ scalingModeOverride: 0, fixedGuiScaleModifier: 0 });

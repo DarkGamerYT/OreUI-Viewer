@@ -52,7 +52,7 @@ const getDefaultSupportedInputMethods = (platform = DEFAULT_PLATFORM) => {
     };
 };
 
-module.exports = {
+module.exports = () => ({
     inputMethods: getDefaultSupportedInputMethods(),
     platform: DEFAULT_PLATFORM,
     arvrPlatform: ARVRPlatform.ARVR_None,
@@ -70,4 +70,4 @@ module.exports = {
     storageType: StorageType.NONE,
     isUsingAlternativeStorage: false,
     isOnline: true
-};
+});

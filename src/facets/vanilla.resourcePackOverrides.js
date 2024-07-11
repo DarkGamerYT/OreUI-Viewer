@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
     lastUpdated: Date.now(),
     definitions: [
         {
@@ -20,4 +20,4 @@ module.exports = {
             ]
         }
     ],
-};
+});

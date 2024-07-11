@@ -1,0 +1,1 @@
+module.exports = () => ({ burnProgress: 0.5, litProgress: 0.5 });

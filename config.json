@@ -1,7 +1,7 @@
 {
-	"pathname": "/play",
-	"file": "/hbui/index.html",
-	"panorama": "trails-and-tales",
+	"pathname": "/gameplay/furnace",
+	"file": "/hbui/gameplay.html",
+	"panorama": "tricky-trials",
 	"use_translation": true,
 	"locale": "en_US"
 }

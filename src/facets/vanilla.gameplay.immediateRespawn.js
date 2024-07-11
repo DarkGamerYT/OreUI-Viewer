@@ -1,1 +1,1 @@
-module.exports = { immediateRespawn: false };
+module.exports = () => ({ immediateRespawn: false });

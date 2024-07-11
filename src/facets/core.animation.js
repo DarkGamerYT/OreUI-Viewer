@@ -1,1 +1,1 @@
-module.exports = { screenAnimationEnabled: true };
+module.exports = () => ({ screenAnimationEnabled: true });

@@ -6,7 +6,7 @@ module.exports = {
     deleteWorld: () => {},
     exportWorld: () => {},
     exportWorldAsTemplate: () => {},
-    clearExportWorldState: () => {},
+    clearExportWorldResult: () => {},
     exportWorldResult: null,
     exportWorldStatus: 0,
     clearPlayerData: () => {},
