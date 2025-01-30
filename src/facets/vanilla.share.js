@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
     isShareSupported: true,
     share: (...string) => {},
-};
+});

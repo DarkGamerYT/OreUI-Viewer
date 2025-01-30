@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
 	createPreviewRealmFromSubscriptionProgress: 2,
 	createPreviewRealmFromSubscriptionResult: 0,
 	isBusy: false,
@@ -7,4 +7,4 @@ module.exports = {
 	createPreviewRealmFromSubscription: (selectedSubscriptionIndex) => {},
     showConfirmationModal: () => {},
 	reset: () => {}
-};
+});

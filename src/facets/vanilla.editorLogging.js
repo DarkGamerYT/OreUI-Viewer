@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
     messageList: [
         {
             level: 3,
@@ -8,4 +8,4 @@ module.exports = {
         }
     ],
     tagList: [ "Test" ]
-};
+});

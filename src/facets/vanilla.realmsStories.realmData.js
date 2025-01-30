@@ -1,1 +1,1 @@
-module.exports = { name: "Test Realm", userXuid: 0, ownerXuid: 0 };
+module.exports = () => ({ name: "Test Realm", userXuid: 0, ownerXuid: 0 });

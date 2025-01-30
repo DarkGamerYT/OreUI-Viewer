@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
     reportPlayer: () => console.log( "[EngineWrapper/PlayerReportFacet] reportPlayer()" ),
     isChatAvailable: () => true,
     decideReportReasonOptions: () => {},
@@ -43,4 +43,4 @@ module.exports = {
             isAuthorBeingReported: false
         }
     ]
-};
+});

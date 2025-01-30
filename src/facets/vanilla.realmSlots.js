@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
     realmSlots: [
         {
             id: 1,
@@ -27,4 +27,4 @@ module.exports = {
 	selectSlot: (index) => {},
 	confirm: () => {},
 	reset: () => {}
-};
+});

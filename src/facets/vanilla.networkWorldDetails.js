@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
     networkDetails: {
         name: "Test Featured Server",
         ping: "0",
@@ -23,4 +23,4 @@ module.exports = {
     },
     hasLoadedDetails: true,
     loadNetworkWorldDetails: () => {},
-};
+});

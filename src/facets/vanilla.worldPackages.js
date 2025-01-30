@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
     loadPacksData: () => {},
     continuePackActivation: () => undefined,
     continuePackDeactivation: () => undefined,
@@ -109,4 +109,4 @@ module.exports = {
     lastConsultedPackSizesError: undefined,
     lastConsultedPackSizesTaskState: 0,
     lastConsultedPackSizes: ""
-};
+});

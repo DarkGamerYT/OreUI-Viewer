@@ -1,5 +1,4 @@
-module.exports = {
-    startDuplicateWorld: () => {},
+module.exports = () => ({    startDuplicateWorld: () => {},
     clearDuplicateWorld: () => {},
     duplicateWorldError: undefined,
     duplicateWorldStatus: 0,
@@ -12,5 +11,4 @@ module.exports = {
     clearPlayerData: () => {},
     resetClearPlayerData: () => {},
     startClearPlayerDataError: null,
-    clearPlayerDataStatus: 0
-};
+    clearPlayerDataStatus: 0});

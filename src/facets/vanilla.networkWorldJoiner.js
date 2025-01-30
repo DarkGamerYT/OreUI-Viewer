@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
     joinFriendServerResult: null,
     joinFriendServer: () => {},
     joinFriendServerState: 0,
@@ -15,4 +15,4 @@ module.exports = {
     clearJoinRealmTaskState: () => {},
     joinRealmResult: null,
     joinRealmTaskState: 0
-};
+});

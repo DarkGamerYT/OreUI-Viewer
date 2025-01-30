@@ -15,7 +15,7 @@ const experimentals = () => {
     return experiments;
 };
 
-module.exports = {
+module.exports = () => ({
     isEditorWorld: false,
     isUsingTemplate: false,
     isLockedTemplate: false,
@@ -101,4 +101,4 @@ module.exports = {
             codeBuilderEnabled: true
         },
     },
-};
+});

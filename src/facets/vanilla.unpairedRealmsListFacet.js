@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
     isLoading: false,
     realms: [
         {
@@ -31,4 +31,4 @@ module.exports = {
             },
         },
     ]
-};
+});

@@ -1,1 +1,1 @@
-module.exports = { playScreenWorldLayoutMode: 0 };
+module.exports = () => ({ playScreenWorldLayoutMode: 0 });

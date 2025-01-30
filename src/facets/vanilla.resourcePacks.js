@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
     texturePacks: {
         global: [
             {
@@ -103,4 +103,4 @@ module.exports = {
     activate: () => console.log( "[EngineWrapper/RPFacet] activate()" ),
     deactivate: () => console.log( "[EngineWrapper/RPFacet] deactivate()" ),
     showSettings: (packId) => console.log( "[EngineWrapper/RPFacet] showSettings();", packId )
-};
+});

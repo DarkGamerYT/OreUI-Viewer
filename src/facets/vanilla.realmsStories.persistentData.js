@@ -1,5 +1,5 @@
-module.exports = {
+module.exports = () => ({
     currentStoryId: 0,
     postInProgressBody: "",
     storyScreenshotSelectionFilePath: "",
-};
+});

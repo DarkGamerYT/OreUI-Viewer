@@ -1,1 +1,1 @@
-module.exports = { copyToClipboard: (text) => {} };
+module.exports = () => ({ copyToClipboard: (text) => {} });

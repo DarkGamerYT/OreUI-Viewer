@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
     externalServerWorlds: [
         {
             id: "external-id1",
@@ -11,5 +11,5 @@ module.exports = {
     addExternalServerWorld: () => {},
     editExternalServerWorld: () => {},
     removeExternalServerWorld: () => {},
-    addedServerId: undefined
-};
+    addedServerId: 1
+});

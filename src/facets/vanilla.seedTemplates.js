@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
     templates: [
         {
             seedValue: "0",
@@ -6,4 +6,4 @@ module.exports = {
             image: "/hbui/assets/welcome_graphic-edbb3.png"
         }
     ]
-};
+});

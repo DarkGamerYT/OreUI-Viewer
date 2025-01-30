@@ -1,5 +1,5 @@
 const { RealmPlayerRoleEnum } = require( "../types.js" );
-module.exports = {
+module.exports = () => ({
     players: [
         {
             gamerTag: "xKingDark",
@@ -42,4 +42,4 @@ module.exports = {
             fetchProfileStatus: 0
         }
     ]
-};
+});

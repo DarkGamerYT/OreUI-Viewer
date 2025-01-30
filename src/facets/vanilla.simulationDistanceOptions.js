@@ -1,1 +1,1 @@
-module.exports = { simulationDistanceOptions: [ 4, 6, 8, 10 ] };
+module.exports = () => ({ simulationDistanceOptions: [ 4, 6, 8, 10 ] });

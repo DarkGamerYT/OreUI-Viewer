@@ -28,4 +28,5 @@ module.exports = () => ({
 	},
 	
 	formatDate: (timestampInSeconds) => new Date( timestampInSeconds * 1000 ).toLocaleDateString(),
+    getHowLongAgoAsString: () => "0 seconds ago",
 });

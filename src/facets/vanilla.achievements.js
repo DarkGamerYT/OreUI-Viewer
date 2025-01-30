@@ -1,5 +1,4 @@
-module.exports = {
-    status: 1,
+module.exports = () => ({    status: 1,
     data: {
         achievementsUnlocked: 1,
         maxGamerScore: 90,
@@ -56,5 +55,4 @@ module.exports = {
         ],
         currentGamerScore: 30,
         maxAchievements: 3
-    }
-};
+    }});

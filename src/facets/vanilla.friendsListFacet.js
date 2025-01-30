@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
     loadingState: 2,
     xblFriends: [
         {
@@ -21,4 +21,4 @@ module.exports = {
         },
     ],
     platformFriends: [],
-};
+});

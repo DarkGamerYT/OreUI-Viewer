@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
     hasPremiumNetworkAccess: true,
     isLoggedInWithMicrosoftAccount: true,
     isTrialAccount: false,
@@ -24,4 +24,4 @@ module.exports = {
     isSignedInPlatformNetwork: true,
     signOutOfMicrosoftAccount: () => {},
     manageMicrosoftAccount: () => {},
-};
+});

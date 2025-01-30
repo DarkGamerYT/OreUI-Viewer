@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
     thirdPartyWorlds: [
         {
             id: "id1",
@@ -9,4 +9,4 @@ module.exports = {
             image: "/src/assets/mcpreview.png"
         }
     ]
-};
+});

@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
     isDevBuild: true,
     isEduBuild: false,
     isPreviewBuild: false,
@@ -9,4 +9,4 @@ module.exports = {
         revision: 23,
         isBeta: true
     },
-};
+});

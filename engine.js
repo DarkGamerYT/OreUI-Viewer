@@ -120,7 +120,7 @@ window.addEventListener(
 		link.rel = "stylesheet";
 		document.getElementsByTagName( "head" )[0].appendChild( link );
 
-		/*new Cubemap(
+		new Cubemap(
 			document.getElementsByTagName( "body" )[0],
 			[
 				"/src/assets/cubemap/" + Config.panorama + "/front.png",
@@ -137,7 +137,7 @@ window.addEventListener(
 				rotate_type: "auto",
 				rotate_speed: 2.5,
 			},
-		);*/
+		);
 
 		//Fix CSS
 		const styleEl = document.createElement( "style" );
@@ -153,7 +153,7 @@ window.addEventListener(
 			+ ".c_o_5,.oQouW,.P3s5b,.nDjUk,"
 			+ ".T3q0T,.R8eUQ,.BLVBU,.b_Dcf,"
 			+ ".YZFU6,.An2ie,.r1fl4,.P6Myy,"
-			+ ".c3aSY "
+			+ ".c3aSY,.rW6em"
 			+ `{ width: auto; }`, styleSheet.cssRules.length 
 		);
 		styleSheet.insertRule( `.nUoyP { height: 1.5rem; }`, styleSheet.cssRules.length );

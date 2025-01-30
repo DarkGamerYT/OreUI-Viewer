@@ -1,1 +1,1 @@
-module.exports = { uploadRealmWorld: { state: 0, result: 0 } };
+module.exports = () => ({ uploadRealmWorld: { state: 0, result: 0 } });

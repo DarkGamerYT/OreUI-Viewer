@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
     data: {
         messages: [
             {
@@ -93,4 +93,4 @@ module.exports = {
     },
     reportClick: () => console.log( "[EngineWrapper/PlayerMessagingServiceFacet] reportClick.bind()" ),
     reportDismiss: () => console.log( "[EngineWrapper/PlayerMessagingServiceFacet] reportDismiss.bind()" )
-};
+});

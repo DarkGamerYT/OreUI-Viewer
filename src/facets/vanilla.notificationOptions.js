@@ -1,1 +1,1 @@
-module.exports = { doNotShowEntitlementsWarning: false, doNotShowOldWorldsWarning: false };
+module.exports = () => ({ doNotShowEntitlementsWarning: false, doNotShowOldWorldsWarning: false });

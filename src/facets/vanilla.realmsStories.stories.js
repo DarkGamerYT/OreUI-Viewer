@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
     stories: [
         {
             authorXuid: "0",
@@ -11,4 +11,4 @@ module.exports = {
             hasLiked: true
         }
     ]
-};
+});

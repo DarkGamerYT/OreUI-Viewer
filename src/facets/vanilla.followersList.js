@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
     playerList: [
         {
             xuid: "0",
@@ -10,4 +10,4 @@ module.exports = {
             isOnline: false
         },
     ],
-};
+});

@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
     loaded: true,
     load: (playerId) => {},
     unload: () => {},
@@ -36,4 +36,4 @@ module.exports = {
             currentUserValueDisplay: "15,384,710"
         },
     ],
-};
+});

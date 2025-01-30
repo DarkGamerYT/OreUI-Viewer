@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
     realmsSubscriber: true,
     marketplacePassSubscriber: true,
     settings: {
@@ -98,4 +98,4 @@ module.exports = {
     deleteNotification: (id) => id,
     saveSettings: () => {},
     setNotificationRead: () => {},
-};
+});

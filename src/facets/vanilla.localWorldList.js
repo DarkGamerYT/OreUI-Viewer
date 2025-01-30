@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({   
     localWorlds: [
         {
             id: "0",
@@ -13,4 +13,4 @@ module.exports = {
             templateVersion: { major: 1, minor: 20, patch: 40, revision: 21 }
         }
     ]
-};
+});

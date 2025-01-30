@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
     fontZoom: 100,
     theme: 0,
     isEditorMode: true,
@@ -8,4 +8,4 @@ module.exports = {
     setKey: () => {},
     setKeys: () => {},
     hasKey: () => true
-};
+});

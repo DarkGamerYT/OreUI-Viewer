@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
   realmOptIn: 2,
   playerOptIn: 2,
   realmEventsStatus: false,
@@ -7,4 +7,4 @@ module.exports = {
   realmTimelineStatus: false,
   currentFetchState: 2,
   currentPostState: 2
-};
+});

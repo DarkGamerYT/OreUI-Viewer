@@ -1,7 +1,7 @@
 {
-	"pathname": "/gameplay/furnace",
-	"file": "/hbui/gameplay.html",
-	"panorama": "tricky-trials",
+	"pathname": "/first-time-sign-in",
+	"file": "/hbui/index.html",
+	"panorama": "creeking",
 	"use_translation": true,
 	"locale": "en_US"
 }

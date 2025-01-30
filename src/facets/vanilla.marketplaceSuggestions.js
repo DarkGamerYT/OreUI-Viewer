@@ -1,3 +1,1 @@
-module.exports = {
-    getMorePacks: { title: "test", pageId: 0 }
-};
+module.exports = () => ({ getMorePacks: { title: "test", pageId: 0 } });

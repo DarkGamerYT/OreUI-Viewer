@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
     currentWorldId: "test",
     worldData: {
         general: {
@@ -94,4 +94,4 @@ module.exports = {
     isEditorWorld: false,
     worldHasBeenModified: false,
     reloadWorld: () => {}
-};
+});

@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
     screenshots: [
         {
             imgSrc: "/src/assets/screenshot4.png",
@@ -22,4 +22,4 @@ module.exports = {
             showcased: false
         },
     ],
-};
+});

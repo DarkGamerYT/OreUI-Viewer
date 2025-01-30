@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
     init: (realmId) => {},
     reset: () => {},
     postStory: () => {},
@@ -26,4 +26,4 @@ module.exports = {
     consumeSettingsState: () => {},
     loadStoriesSlice: (start, end) => {},
     clearSettingsStatus: () => {}
-};
+});

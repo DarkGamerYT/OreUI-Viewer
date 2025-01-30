@@ -1,1 +1,1 @@
-module.exports = { acceptRequest: (playerId) => {}, rejectRequest: (playerId) => {} };
+module.exports = () => ({ acceptRequest: (playerId) => {}, rejectRequest: (playerId) => {} });
