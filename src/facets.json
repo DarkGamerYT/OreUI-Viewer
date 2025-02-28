@@ -55,6 +55,7 @@
     "vanilla.notificationOptions",
     "vanilla.notifications",
     "vanilla.options",
+	"vanilla.party",
 	"vanilla.playerAchievements",
 	"vanilla.playerBanned",
 	"vanilla.playerFollowingList",

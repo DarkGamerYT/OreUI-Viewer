@@ -1,5 +1,5 @@
 {
-	"pathname": "/first-time-sign-in",
+	"pathname": "/disconnected?titleMessage=Disconnected&errorMessage=You were kicked from the game",
 	"file": "/hbui/index.html",
 	"panorama": "creeking",
 	"use_translation": true,
