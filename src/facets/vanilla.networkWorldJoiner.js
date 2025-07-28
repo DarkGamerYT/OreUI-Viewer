@@ -14,5 +14,10 @@ module.exports = () => ({
     joinRealmWorld: () => {},
     clearJoinRealmTaskState: () => {},
     joinRealmResult: null,
-    joinRealmTaskState: 0
+    joinRealmTaskState: 0,
+    joinLANServerTaskState: 0,
+    joinLANServerResult: null,
+    joinLanServer() {},
+    clearJoinLANServerTaskState() {},
 });
+

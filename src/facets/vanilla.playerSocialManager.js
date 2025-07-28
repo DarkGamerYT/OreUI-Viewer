@@ -5,4 +5,7 @@ module.exports = () => ({
     unblock: (playerId) => {},
     mute: (playerId) => {},
     unmute: (playerId) => {},
+    favorite() {},
+    unfavorite() {},
+    showXboxProfileCard() {},
 });

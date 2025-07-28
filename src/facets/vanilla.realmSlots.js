@@ -3,28 +3,30 @@ module.exports = () => ({
         {
             id: 1,
             worldName: "My World",
-            slotImage: ""
+            slotImage: "",
         },
         {
             id: -1,
             worldName: "New World",
-            slotImage: ""
+            slotImage: "",
         },
         {
             id: 3,
             worldName: "Celebration Map",
-            slotImage: "https://packsbedrockstage-endpoint.azureedge.net/pack-images/celebration_world_icon.jpg"
-        }
+            slotImage: "https://packsbedrockstage-endpoint.azureedge.net/pack-images/celebration_world_icon.jpg",
+        },
     ],
-	isLoading: false,
+    isLoading: false,
     selectedRealmIndex: 0,
-	isSlotSelected: true,
+    isSlotSelected: true,
     didFailToActivateSlot: false,
     didFailToQuerySelectedRealmDetails: false,
-	isShowingConfirmationModal: false,
+    isShowingConfirmationModal: false,
     selectedRealmName: "My Realm",
     getSelectedRealmDetails: (id) => {},
-	selectSlot: (index) => {},
-	confirm: () => {},
-	reset: () => {}
+    selectSlot: (index) => {},
+    confirm: () => {},
+    reset: () => {},
+    status: 0,
 });
+

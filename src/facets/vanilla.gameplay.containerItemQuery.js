@@ -1,4 +1,4 @@
-module.exports = ({ container, index }) => {
+module.exports = ({ container, index } = {}) => {
     switch (container) {
         case 28: {
             switch (index) {

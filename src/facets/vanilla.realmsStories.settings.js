@@ -1,10 +1,14 @@
+const { RealmsStoriesTimelineOptInStatus } = require("../types");
+
 module.exports = () => ({
-  realmOptIn: 2,
-  playerOptIn: 2,
-  realmEventsStatus: false,
-  realmCoordinatesStatus: false,
-  realmNotificationsStatus: false,
-  realmTimelineStatus: false,
-  currentFetchState: 2,
-  currentPostState: 2
+    timelineRequiredStatus: false,
+    realmOptIn: RealmsStoriesTimelineOptInStatus.OptedIn,
+    playerOptIn: RealmsStoriesTimelineOptInStatus.OptedIn,
+    realmEventsStatus: true,
+    realmCoordinatesStatus: true,
+    realmNotificationsStatus: true,
+    realmTimelineStatus: true,
+    currentFetchState: 2,
+    currentPostState: 2,
 });
+

@@ -1,3 +1,4 @@
+// @ts-check
 module.exports = () => ({
     init: (realmId) => {},
     reset: () => {},
@@ -25,5 +26,22 @@ module.exports = () => ({
     fetchSettings: () => {},
     consumeSettingsState: () => {},
     loadStoriesSlice: (start, end) => {},
-    clearSettingsStatus: () => {}
+    clearSettingsStatus: () => {},
+    joinRealmFromInvite() {},
+    clearStoryFeedStatus() {},
+    fetchEvents() {},
+    clearEventsStatus() {},
+    fetchSessions() {},
+    clearFetchMembersStatus() {},
+    clearFetchSessionsStatus() {},
+    setPlayerOptInStatusAndPostWithOptInTelemetry() {},
+    setRealmTimelineRequirementStatus() {},
+    postSettingsOnExit() {},
+    reportToClubOwner() {},
+    clearReportToClubOwnerStatus() {},
+    reportFeedItemToXbox() {},
+    reportGamertagToXbox() {},
+    clearReportToXboxStatus(id) {},
+    openManageMembersScreen() {},
 });
+

@@ -1,4 +1,5 @@
 module.exports = { 
+    xboxAPICallResult: 0, 
     isLoading: false,
     searchResults: [
         {

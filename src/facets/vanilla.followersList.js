@@ -7,7 +7,28 @@ module.exports = () => ({
             isFollowingMe: true,
             isFollowedByMe: true,
             gamerIcon: "/src/assets/mcpreview.png",
-            isOnline: false
+            isOnline: false,
+        },
+        {
+            xuid: "2535440895442815",
+            gamertag: "iiDarkGamerYT",
+            description: "Creator of Ore UI Viewer.",
+            isFollowingMe: true,
+            isFollowedByMe: true,
+            gamerIcon: "/src/assets/facet_resources/profile_pictures/iiDarkGamerYT.png",
+            isOnline: false,
+        },
+        {
+            xuid: "2535440895442815",
+            gamertag: "Andexter8",
+            description: "Ore UI Viewer Developer.",
+            isFollowingMe: true,
+            isFollowedByMe: true,
+            gamerIcon: "/src/assets/facet_resources/profile_pictures/8Crafter.gif",
+            isOnline: true,
         },
     ],
+    xboxAPICallResult: 0,
+
+    isLoading: false,
 });

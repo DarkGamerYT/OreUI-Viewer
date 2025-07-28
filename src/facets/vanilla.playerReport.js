@@ -1,5 +1,6 @@
+// @ts-check
 module.exports = () => ({
-    reportPlayer: () => console.log( "[EngineWrapper/PlayerReportFacet] reportPlayer()" ),
+    reportPlayer: () => console.log("[EngineWrapper/PlayerReportFacet] reportPlayer()"),
     isChatAvailable: () => true,
     decideReportReasonOptions: () => {},
     reportAreaOptions: [
@@ -8,7 +9,7 @@ module.exports = () => ({
         { label: "xbox.report.area.gameplay", value: 2 },
         { label: "xbox.report.area.ingame", value: 3 },
         { label: "xbox.report.area.nameOrGamertag", value: 4 },
-        { label: "xbox.report.area.other", value: 5 }
+        { label: "xbox.report.area.other", value: 5 },
     ],
     reportReasonOptions: [
         { label: "wantToReportThem", value: 11 },
@@ -23,7 +24,7 @@ module.exports = () => ({
         { label: "drugsOrAlcohol", value: 16 },
         { label: "childSexualExploitationOrAbuse", value: 6 },
         { label: "terrorismOrViolentExtremism", value: 7 },
-        { label: "nonConsensualIntimateImagery", value: 10 }
+        { label: "nonConsensualIntimateImagery", value: 10 },
     ],
     reportArea: 0,
     reportReason: 0,
@@ -35,12 +36,19 @@ module.exports = () => ({
         {
             message: "Reportable Message!",
             author: "xKingDark",
-            isAuthorBeingReported: true
+            isAuthorBeingReported: true,
         },
         {
             message: "Hello!",
             author: "Random User",
-            isAuthorBeingReported: false
-        }
-    ]
+            isAuthorBeingReported: false,
+        },
+    ],
+    hasReachedReportLimit: false,
+    screenshot: "",
+    galleryScreenshotId: "",
+    platformId: "",
+    finishReport() {},
+    startReport() {},
 });
+

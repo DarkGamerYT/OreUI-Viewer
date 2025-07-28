@@ -1,4 +1,5 @@
 module.exports = () => ({
+    xboxAPICallResult: 0,
     playerList: [
         {
             xuid: "0",
@@ -7,7 +8,9 @@ module.exports = () => ({
             isFollowingMe: true,
             isFollowedByMe: true,
             gamerIcon: "/src/assets/mcpreview.png",
-            isOnline: false
+            isOnline: false,
         },
     ],
+    isLoading: false,
 });
+

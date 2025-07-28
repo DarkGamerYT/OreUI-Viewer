@@ -1,5 +1,5 @@
 module.exports = () => ({
     load: (playerId) => {},
     unload: () => {},
-    ...require("./vanilla.achievements"),
+    ...require("./vanilla.achievements")(),
 });

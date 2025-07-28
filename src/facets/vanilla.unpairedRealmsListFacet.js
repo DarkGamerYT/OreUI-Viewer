@@ -25,10 +25,14 @@ module.exports = () => ({
                         name: "MrDirt",
                         permission: 0,
                         realName: "xKingDark",
-                        xuid: "0"
-                    }
-                ]
+                        xuid: "0",
+                    },
+                ],
             },
         },
-    ]
+    ],
+    state: 0,
+    compatibility: undefined,
+    forceFetchUnpairedRealmsList() {},
 });
+

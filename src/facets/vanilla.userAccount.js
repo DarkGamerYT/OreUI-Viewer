@@ -1,3 +1,4 @@
+// @ts-check
 module.exports = () => ({
     hasPremiumNetworkAccess: true,
     isLoggedInWithMicrosoftAccount: true,
@@ -10,18 +11,33 @@ module.exports = () => ({
     userPermissions: {
         multiplayer: {
             denyReasons: [],
-            allowed: true
+            allowed: true,
         },
         addFriends: {
             denyReasons: [],
-            allowed: true
+            allowed: true,
         },
         viewProfiles: {
             denyReasons: [],
-            allowed: true
-        }
+            allowed: true,
+        },
     },
     isSignedInPlatformNetwork: true,
     signOutOfMicrosoftAccount: () => {},
     manageMicrosoftAccount: () => {},
+
+    signInPlatformNetworkTaskResult: null,
+    signInPlatformNetworkTaskState: 0,
+    accountUnlinkState: 0,
+    currentXuid: "2535440895442815",
+    currentPlatformId: "",
+    isMarketplacePassSubscriptionActive: false,
+    isRealmsPlusSubscriptionActive: true,
+    isSignInInProgress: false,
+    updateMultiplayerPrivilegeUsingSystemModal() {},
+    unlinkMicrosoftAccount() {},
+    clearAccountUnlinkState() {},
+    signInToPlatformNetwork() {},
+    resetSignInPlatformNetwork() {},
 });
+

@@ -7,5 +7,11 @@ module.exports = () => ({
     getKey: () => "{}",
     setKey: () => {},
     setKeys: () => {},
-    hasKey: () => true
+    hasKey: () => true,
+    currentThemeId: "minecraft:editor:theme:dark",
+    themesMap: {},
+    addNewTheme: () => {},
+    updateThemeColor: () => {},
+    deleteTheme: () => {},
 });
+

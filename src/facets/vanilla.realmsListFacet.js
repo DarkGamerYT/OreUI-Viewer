@@ -3,6 +3,8 @@ module.exports = () => ({
     realms: [
         {
             isOwner: true,
+            unreadStoryCount: 7,
+            areStoriesNotificationsEnabled: true,
             world: {
                 id: "1",
                 slotName: "Slot name",
@@ -25,10 +27,15 @@ module.exports = () => ({
                         name: "MrDirt",
                         permission: 0,
                         realName: "xKingDark",
-                        xuid: "0"
-                    }
-                ]
+                        xuid: "0",
+                    },
+                ],
             },
         },
     ],
+    error: 0,
+    state: 2,
+    compatibility: 0,
+    forceFetchRealmsList() {},
 });
+

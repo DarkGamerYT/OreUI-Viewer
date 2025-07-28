@@ -1,4 +1,6 @@
-module.exports = () => ({    startDuplicateWorld: () => {},
+// @ts-check
+module.exports = () => ({
+    startDuplicateWorld: () => {},
     clearDuplicateWorld: () => {},
     duplicateWorldError: undefined,
     duplicateWorldStatus: 0,
@@ -11,4 +13,16 @@ module.exports = () => ({    startDuplicateWorld: () => {},
     clearPlayerData: () => {},
     resetClearPlayerData: () => {},
     startClearPlayerDataError: null,
-    clearPlayerDataStatus: 0});
+    clearPlayerDataStatus: 0,
+    clearPlayerDataTaskState: 0,
+    makeWorldInfiniteProgress: 0,
+    makeWorldInfiniteState: 0,
+    makeWorldInfiniteError: null,
+    duplicateWorldTaskState: 0,
+    clearDuplicateWorldTaskState() {},
+    makeWorldInfinite() {},
+    clearMakeWorldInfiniteState() {},
+    saveScreenshotAsWorldIcon() {},
+    resetWorldIconToDefault() {},
+});
+

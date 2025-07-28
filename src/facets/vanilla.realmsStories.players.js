@@ -1,4 +1,4 @@
-const { RealmPlayerRoleEnum } = require( "../types.js" );
+const { RealmPlayerRoleEnum } = require("../types.js");
 module.exports = () => ({
     players: [
         {
@@ -7,7 +7,7 @@ module.exports = () => ({
             gamerIcon: "/src/assets/mcpreview.png",
             isOnline: true,
             role: RealmPlayerRoleEnum.OWNER,
-            fetchProfileStatus: 0
+            fetchProfileStatus: 0,
         },
         {
             gamerTag: "xKingDark",
@@ -15,7 +15,7 @@ module.exports = () => ({
             gamerIcon: "/src/assets/mcpreview.png",
             isOnline: true,
             role: RealmPlayerRoleEnum.OPERATOR,
-            fetchProfileStatus: 0
+            fetchProfileStatus: 0,
         },
         {
             gamerTag: "xKingDark",
@@ -23,7 +23,7 @@ module.exports = () => ({
             gamerIcon: "/src/assets/mcpreview.png",
             isOnline: true,
             role: RealmPlayerRoleEnum.MEMBER,
-            fetchProfileStatus: 0
+            fetchProfileStatus: 0,
         },
         {
             gamerTag: "xKingDark",
@@ -31,7 +31,7 @@ module.exports = () => ({
             gamerIcon: "/src/assets/mcpreview.png",
             isOnline: true,
             role: RealmPlayerRoleEnum.VISITOR,
-            fetchProfileStatus: 0
+            fetchProfileStatus: 0,
         },
         {
             gamerTag: "xKingDark",
@@ -39,7 +39,9 @@ module.exports = () => ({
             gamerIcon: "/src/assets/mcpreview.png",
             isOnline: true,
             role: RealmPlayerRoleEnum.NONMEMBER,
-            fetchProfileStatus: 0
-        }
-    ]
+            fetchProfileStatus: 0,
+        },
+    ],
+    fetchOnlineMembersStatus() {},
+    fetchMembersStatus() {},
 });

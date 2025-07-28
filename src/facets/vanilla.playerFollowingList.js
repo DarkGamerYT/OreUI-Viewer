@@ -8,7 +8,8 @@ module.exports = () => ({
             isFollowingMe: true,
             isFollowedByMe: true,
             gamerIcon: "/src/assets/mcpreview.png",
-            isOnline: false
+            isOnline: false,
         },
     ],
+    isLoading: false,
 });

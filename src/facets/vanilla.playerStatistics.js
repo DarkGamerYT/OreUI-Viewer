@@ -1,3 +1,4 @@
+// @ts-check
 module.exports = () => ({
     loaded: true,
     load: (playerId) => {},
@@ -6,34 +7,47 @@ module.exports = () => ({
         {
             label: "Time played",
             icon: "/hbui/assets/IconClockGrey-ea564.png",
-            valueRaw: 65,
-            valueDisplay: "1h 5m",
-            currentUserValueRaw: 127,
-            currentUserValueDisplay: "2h 7m"
+            valueRaw: 117365,
+            valueDisplay: "81d 12h 5m",
+            currentUserValueRaw: 265150,
+            currentUserValueDisplay: "184d 3h 10m",
+            currentUserValueNarration: "184 days 3 hours 10 minutes",
+            valueNarration: "81 days 12 hours 5 minutes",
+            name: "MinutesPlayed",
         },
         {
             label: "Blocks broken",
             icon: "/hbui/assets/IconPickaxeGrey-cb118.png",
-            valueRaw: 1500,
-            valueDisplay: "1,500",
-            currentUserValueRaw: 2700,
-            currentUserValueDisplay: "2,700"
+            currentUserValueNarration: "213077",
+            currentUserValueDisplay: "213,077",
+            currentUserValueRaw: 213077,
+            valueNarration: "521684",
+            valueDisplay: "521,684",
+            valueRaw: 521684,
+            name: "BlockBrokenTotal",
         },
         {
             label: "Mobs defeated",
             icon: "/hbui/assets/IconSwordGrey-9087f.png",
-            valueRaw: 43,
-            valueDisplay: "43",
-            currentUserValueRaw: 43,
-            currentUserValueDisplay: "43"
+            currentUserValueNarration: "6672",
+            currentUserValueDisplay: "6,672",
+            currentUserValueRaw: 6672,
+            valueNarration: "4729",
+            valueDisplay: "4,729",
+            valueRaw: 4729,
+            name: "MobKilled.IsMonster.1",
         },
         {
             label: "Distance travelled",
             icon: "/hbui/assets/IconBootsGrey-142a3.png",
-            valueRaw: 24384710,
-            valueDisplay: "24,384,710",
-            currentUserValueRaw: 15384710,
-            currentUserValueDisplay: "15,384,710"
+            currentUserValueNarration: "700746505",
+            currentUserValueDisplay: "700,746,505",
+            currentUserValueRaw: 700746505,
+            valueNarration: "1115130724",
+            valueDisplay: "1,115,130,724",
+            valueRaw: 1115130724,
+            name: "DistanceTravelled",
         },
     ],
 });
+

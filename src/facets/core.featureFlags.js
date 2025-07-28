@@ -3,7 +3,7 @@ module.exports = () => ({
         "core.hasRealmsEnabled",
         "core.mixBlendMode",
         "core.screenReader.readWithOptions",
-        
+
         "vanilla.ab.firstSignInHeroMessageIncentive",
         "vanilla.ab.newEditWorldScreenThirdVariant",
         "vanilla.achievementsReward",
@@ -23,6 +23,12 @@ module.exports = () => ({
         "vanilla.screenshotsGallery",
         "vanilla.screenshotsShowcase",
         "vanilla.settings.unlockRecipes",
-        "vanilla.templateScreen"
+        "vanilla.templateScreen",
+
+        // 1.21.93.
+        "vanilla.realmsOwnerCanRequireOptIn",
+        "vanilla.ab.newPlayScreenD",
+        "vanilla.newFriendsDrawer",
+        "vanilla.createFromAddOn",
     ],
 });

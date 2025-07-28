@@ -1,4 +1,6 @@
+// @ts-check
 module.exports = () => ({
+    lastActivatedPackId: "",
     texturePacks: {
         global: [
             {
@@ -11,8 +13,10 @@ module.exports = () => ({
                 image: "/src/assets/mc.png",
                 isMarketplaceItem: true,
                 isPlatformLocked: false,
-                hasSettings: true
-            }
+                hasSettings: true,
+                isAddon: false,
+                type: "Resource",
+            },
         ],
         active: [
             {
@@ -25,8 +29,10 @@ module.exports = () => ({
                 image: "/src/assets/mc.png",
                 isMarketplaceItem: true,
                 isPlatformLocked: false,
-                hasSettings: true
-            }
+                hasSettings: true,
+                isAddon: false,
+                type: "Resource",
+            },
         ],
         available: [
             {
@@ -39,8 +45,10 @@ module.exports = () => ({
                 image: "/src/assets/mcpreview.png",
                 isMarketplaceItem: true,
                 isPlatformLocked: false,
-                hasSettings: true
-            }
+                hasSettings: true,
+                isAddon: false,
+                type: "Resource",
+            },
         ],
         realms: [
             {
@@ -53,10 +61,27 @@ module.exports = () => ({
                 image: "/src/assets/mcpreview.png",
                 isMarketplaceItem: true,
                 isPlatformLocked: false,
-                hasSettings: true
-            }
+                hasSettings: true,
+                isAddon: false,
+                type: "Resource",
+            },
         ],
-        unowned: []
+        unowned: [
+            {
+                id: "4",
+                contentId: "4",
+                name: "Test Pack #4",
+                creator: "8Crafter",
+                description: "Test",
+                size: "3.5MB",
+                image: "/src/assets/mcpreview.png",
+                isMarketplaceItem: true,
+                isPlatformLocked: false,
+                hasSettings: true,
+                isAddon: false,
+                type: "Resource",
+            },
+        ],
     },
     activeBehaviorPacks: [
         {
@@ -69,8 +94,10 @@ module.exports = () => ({
             image: "/src/assets/mc.png",
             isMarketplaceItem: true,
             isPlatformLocked: false,
-            hasSettings: true
-        }
+            hasSettings: true,
+            isAddon: false,
+            type: "Behavior",
+        },
     ],
     availableBehaviorPacks: [
         {
@@ -83,13 +110,15 @@ module.exports = () => ({
             image: "/src/assets/mcpreview.png",
             isMarketplaceItem: true,
             isPlatformLocked: false,
-            hasSettings: true
-        }
+            hasSettings: true,
+            isAddon: false,
+            type: "Behavior",
+        },
     ],
     status: 0,
     downloadProgress: 0.5,
     importProgress: 0.1,
-    resourcePackToDownload: { title: "Test" },
+    resourcePackToDownload: { title: "Test", body: "Test body" },
     marketplacePackId: "1",
     userOwnsAtLeastOnePack: true,
     prompt: {
@@ -98,9 +127,95 @@ module.exports = () => ({
         body: "",
         id: "prompt",
         title: "",
-        handleAction: () => console.log( "[EngineWrapper/RPFacet] prompt.handleAction()" )
+        handleAction: () => console.log("[EngineWrapper/RPFacet] prompt.handleAction()"),
     },
-    activate: () => console.log( "[EngineWrapper/RPFacet] activate()" ),
-    deactivate: () => console.log( "[EngineWrapper/RPFacet] deactivate()" ),
-    showSettings: (packId) => console.log( "[EngineWrapper/RPFacet] showSettings();", packId )
+    activate: () => console.log("[EngineWrapper/RPFacet] activate()"),
+    deactivate: () => console.log("[EngineWrapper/RPFacet] deactivate()"),
+    showSettings: (packId) => console.log("[EngineWrapper/RPFacet] showSettings();", packId),
+    unownedTexturePacks: [
+        {
+            id: "4",
+            contentId: "4",
+            name: "Test Pack #4",
+            creator: "8Crafter",
+            description: "Test",
+            size: "3.5MB",
+            image: "/src/assets/mcpreview.png",
+            isMarketplaceItem: true,
+            isPlatformLocked: false,
+            hasSettings: true,
+            isAddon: false,
+            type: "Resource",
+        },
+    ],
+    realmsTexturePacks: [
+        {
+            id: "3",
+            contentId: "3",
+            name: "Test Pack #3",
+            creator: "xKingDark",
+            description: "Test",
+            size: "3.5MB",
+            image: "/src/assets/mcpreview.png",
+            isMarketplaceItem: true,
+            isPlatformLocked: false,
+            hasSettings: true,
+            isAddon: false,
+            type: "Resource",
+        },
+    ],
+    globalTexturePacks: [
+        {
+            id: "0",
+            contentId: "0",
+            name: "Test Pack #0",
+            creator: "xKingDark",
+            description: "Test",
+            size: "3.5MB",
+            image: "/src/assets/mc.png",
+            isMarketplaceItem: true,
+            isPlatformLocked: false,
+            hasSettings: true,
+            isAddon: false,
+            type: "Resource",
+        },
+    ],
+    availableTexturePacks: [
+        {
+            id: "2",
+            contentId: "2",
+            name: "Test Pack #2",
+            creator: "xKingDark",
+            description: "Test",
+            size: "3.5MB",
+            image: "/src/assets/mcpreview.png",
+            isMarketplaceItem: true,
+            isPlatformLocked: false,
+            hasSettings: true,
+            isAddon: false,
+            type: "Resource",
+        },
+    ],
+    activeTexturePacks: [
+        {
+            id: "1",
+            contentId: "1",
+            name: "Test Pack #1",
+            creator: "xKingDark",
+            description: "Test",
+            size: "3.5MB",
+            image: "/src/assets/mc.png",
+            isMarketplaceItem: true,
+            isPlatformLocked: false,
+            hasSettings: true,
+            isAddon: false,
+            type: "Resource",
+        },
+    ],
+    realmsSubscriber: true,
+    realmsPlusSupported: true,
+    cancelDownload() {},
+    changePackPriority() {},
+    clearLastActivatedPackId() {},
 });
+

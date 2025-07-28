@@ -62,6 +62,25 @@ const RealmPlayerRoleEnum = {
     OWNER: 3,
 };
 
+const FriendPresence = {
+    Unknown: 0,
+    Online: 1,
+    Away: 2,
+    Offline: 3,
+};
+
+const FriendFavoriteStatus = {
+    UNKNOWN: 0,
+    FAVORITE: 1,
+    NOT_FAVORITE: 2,
+};
+
+const RealmsStoriesTimelineOptInStatus = {
+    OptedIn: 0,
+    OptedOut: 1,
+    None: 2,
+};
+
 module.exports = {
     ScreenType,
     HandheldDeviceType,
@@ -71,4 +90,8 @@ module.exports = {
     Controller,
     StorageType,
     RealmPlayerRoleEnum,
+    FriendPresence,
+    FriendFavoriteStatus,
+    RealmsStoriesTimelineOptInStatus,
 };
+

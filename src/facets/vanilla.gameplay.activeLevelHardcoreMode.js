@@ -1,1 +1,6 @@
-module.exports = () => ({ isHardcore: true });
+module.exports = () => ({
+    isHardcore: true,
+
+    // 1.21.93.
+    isHardcoreMode: true,
+});

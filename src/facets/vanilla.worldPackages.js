@@ -10,6 +10,7 @@ module.exports = () => ({
     packDownloadProgress: 0,
     packDownloadName: "Test",
     packDownloadError: undefined,
+    packDownloadErrorData: { packTitles: [], storageSpaceNeeded: "" },
     packDownloadStatus: 0,
     packDownloadTaskState: 0,
     worldPacksData: {
@@ -24,8 +25,10 @@ module.exports = () => ({
                 image: "/src/assets/mc.png",
                 isMarketplaceItem: true,
                 isPlatformLocked: false,
-                hasSettings: true
-            }
+                hasSettings: true,
+                isAddon: false,
+                type: "Resource",
+            },
         ],
         activeTexturePacks: [
             {
@@ -38,8 +41,10 @@ module.exports = () => ({
                 image: "/src/assets/mc.png",
                 isMarketplaceItem: true,
                 isPlatformLocked: false,
-                hasSettings: true
-            }
+                hasSettings: true,
+                isAddon: false,
+                type: "Resource",
+            },
         ],
         availableTexturePacks: [
             {
@@ -52,8 +57,10 @@ module.exports = () => ({
                 image: "/src/assets/mcpreview.png",
                 isMarketplaceItem: true,
                 isPlatformLocked: false,
-                hasSettings: true
-            }
+                hasSettings: true,
+                isAddon: false,
+                type: "Resource",
+            },
         ],
         realmsTexturePacks: [
             {
@@ -66,10 +73,27 @@ module.exports = () => ({
                 image: "/src/assets/mcpreview.png",
                 isMarketplaceItem: true,
                 isPlatformLocked: false,
-                hasSettings: true
-            }
+                hasSettings: true,
+                isAddon: false,
+                type: "Resource",
+            },
         ],
-        unownedTexturePacks: [],
+        unownedTexturePacks: [
+            {
+                id: "4",
+                contentId: "4",
+                name: "Test Pack #4",
+                creator: "8Crafter",
+                description: "Test",
+                size: "3.5MB",
+                image: "/src/assets/mcpreview.png",
+                isMarketplaceItem: true,
+                isPlatformLocked: false,
+                hasSettings: true,
+                isAddon: false,
+                type: "Resource",
+            },
+        ],
         activeBehaviorPacks: [
             {
                 id: "0",
@@ -81,8 +105,10 @@ module.exports = () => ({
                 image: "/src/assets/mc.png",
                 isMarketplaceItem: true,
                 isPlatformLocked: false,
-                hasSettings: true
-            }
+                hasSettings: true,
+                isAddon: false,
+                type: "Behavior",
+            },
         ],
         availableBehaviorPacks: [
             {
@@ -95,18 +121,22 @@ module.exports = () => ({
                 image: "/src/assets/mcpreview.png",
                 isMarketplaceItem: true,
                 isPlatformLocked: false,
-                hasSettings: true
-            }
+                hasSettings: true,
+                isAddon: false,
+                type: "Behavior",
+            },
         ],
 
         realmsPlusSupported: true,
         realmsSubscriber: true,
-        sharedPacks: false
+        sharedPacks: false,
     },
+    isReadyForDownload: false,
     isInitialized: true,
-    getPackSizes: () => {},
-    getPackSizesReset: () => {},
+    getPackSizes() {},
+    getPackSizesReset() {},
     lastConsultedPackSizesError: undefined,
     lastConsultedPackSizesTaskState: 0,
-    lastConsultedPackSizes: ""
+    lastConsultedPackSizes: "",
 });
+

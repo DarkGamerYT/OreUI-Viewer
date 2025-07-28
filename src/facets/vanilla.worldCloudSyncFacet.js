@@ -1,6 +1,9 @@
 module.exports = () => ({
-    reset: () => {},
+    reset() {},
     syncWorldProgress: 0,
     syncWorldResult: 0,
-    syncWorld: () => {}
+    syncWorld() {},
+    syncWorldTaskState: 0,
+    clearSyncWorldTaskState() {},
 });
+

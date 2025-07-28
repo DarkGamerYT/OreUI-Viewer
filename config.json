@@ -1,7 +1,7 @@
 {
-	"pathname": "/disconnected?titleMessage=Disconnected&errorMessage=You were kicked from the game",
+	"pathname": "/play",
 	"file": "/hbui/index.html",
-	"panorama": "creeking",
+	"panorama": "chase-the-skies",
 	"use_translation": true,
 	"locale": "en_US"
 }

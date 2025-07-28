@@ -1,0 +1,18 @@
+module.exports = () => ({
+    isTemplateScreenAvailable: true,
+    canDownloadBeCancelled: true,
+    importedPackName: "",
+    importingTaskResult: null,
+    importingTaskState: 0,
+    downloadingTaskResult: null,
+    downloadingTaskState: 0,
+    downloadingStatus: null,
+    downloadTotalBytes: "",
+    downloadingProgressBytes: "",
+    downloadingProgressPercent: 0,
+    downloadWorldTemplate() {},
+    cancelDownload() {},
+    importWorldTemplate() {},
+    resetDownloadTask() {},
+    resetImportTask() {},
+});
